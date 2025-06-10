@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "683db47543dcc2e8fd5be992"
+  },
+  "fullName": "Nguyễn Thị Phương Nhi",
+  "email": "nhi0372399699@gmail.com",
+  "password": "$2b$10$VjiI6UqQiSkH6KupznbARuTA3zOicSGKfCwcR8PRj1EykaYJCzw8G",
+  "phone": "0372399699",
+  "role": "admin",
+  "bookingHistory": [],
+  "createdAt": {
+    "$date": "2025-06-02T14:25:57.900Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T14:25:57.900Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683db4ab43dcc2e8fd5be995"
+  },
+  "fullName": "Nguyễn Văn Hiếu",
+  "email": "hieu@gmail.com",
+  "password": "$2b$10$4IUl/8x0bpkQTNAwKFx80.LkADPy2MQT3shewdl8.EALA2YSZhZzK",
+  "phone": "0982245567",
+  "role": "user",
+  "bookingHistory": [],
+  "createdAt": {
+    "$date": "2025-06-02T14:26:51.005Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T14:26:51.005Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "683db59443dcc2e8fd5be9ae"
+  },
+  "fullName": "Nguyễn Văn Hơn",
+  "email": "hon10@gmail.com",
+  "password": "$2b$10$HfmMjT8lVWuwXC2uiqf2Gu3AW4k2KqfN1U2KEx9AZqOjPy5TPv0Sm",
+  "phone": "0708091060",
+  "role": "user",
+  "bookingHistory": [],
+  "createdAt": {
+    "$date": "2025-06-02T14:30:44.065Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T14:30:44.065Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68404e4374dd7d060c07eed7"
+  },
+  "movies": "{"
+}]

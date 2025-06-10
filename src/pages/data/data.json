@@ -1,0 +1,2961 @@
+{
+    "movies": [
+    {
+      "id":"68404ef474dd7d060c07efda",
+      "title": "Đất Rừng Phương Nam",
+      "image": "https://khenphim.com/wp-content/uploads/2023/10/Dat-Rung-Phuong-Nam-pic1-poster_KP-scaled.webp",
+      "bannerImage":"https://media.vov.vn/sites/default/files/styles/large/public/2023-10/38783489116850133420044981537877240494998954n-16974409104521245489291.jpeg.jpg",
+      "rating": 4.8,
+      "category": "Phiêu Lưu",
+      "duration": "2h 15m",
+      "releaseDate": "2024-02-10",
+      "description": "Chuyến phiêu lưu của An giữa vùng đất Nam Kỳ Lục Tỉnh trong những năm đầu kháng chiến chống Pháp.",
+      "isNowPlaying": true,
+      "isComingSoon": false,
+      "censorship": "P - PHIM DÀNH CHO MỌI ĐỐI TƯỢNG",
+      "language": "Tiếng Việt",
+      "storyline": "Trong những năm đầu của cuộc kháng chiến chống Pháp, cậu bé An theo dòng người tản cư tìm đường về phương Nam. Khi gia đình lưu lạc mỗi người một nơi, An đã cùng chú Năm và những người bạn mới trên đường phiêu bạt qua những vùng đất rừng phương Nam.",
+      "director": {
+        "name": "Nguyễn Quang Dũng",
+        "image": "https://bazaarvietnam.vn/wp-content/uploads/2024/01/harper-bazaar-dao-dien-nguyen-quang-dung-14-scaled-e1704536409487.jpg",
+        "description": "Đạo diễn nổi tiếng với nhiều phim điện ảnh ăn khách như Những Nụ Hôn Rực Rỡ, Tháng Năm Rực Rỡ"
+      },
+      "actors": [
+        {
+          "name": "Huỳnh Hữu Khang",
+          "image": "https://i.vgt.vn/2023/10/24/huynh-hao-khang-an-trong-dat-rung-phuong-nam-the-he-moi-co-bi-cai-bong-cua-hung-thuan-lu-mo-37e-7011107.png",
+          "role": "An"
+        },
+        {
+          "name": "Tuấn Trần",
+          "image": "https://nguoinoitieng.tv/images/nnt/96/1/bb1v.jpg",
+          "role": "Út Lượm"
+        },
+        {
+          "name": "Hồng Ánh",
+          "image": "https://media.phunutoday.vn/files/hoangthuong/2017/09/02/tieu-su-dien-vien-hong-anh-1-0025-phunutoday.jpg",
+          "role": "Má An"
+        },
+        {
+          "name": "Công Ninh",
+          "image": "https://images2.thanhnien.vn/Uploaded/thanhlongn/2023_01_18/cong-ninh-4-4675.jpeg",
+          "role": "Ông Ba bắt rắn"
+        },
+        {
+          "name": "Tiến Luật",
+          "image": "https://35express.org/wp-content/uploads/2021/05/tien-luat-la-ai-2-35express-768x576.jpg",
+          "role": "Thầy giáo Nho"
+        },
+        {
+          "name": "Trấn Thành",
+          "image": "https://images2.thanhnien.vn/528068263637045248/2023/8/17/edit-3673866748894753192094058610540232771086102n-16922488357671188500151.png",
+          "role": "Chú Năm"
+        }
+      ],
+      "cinemas": [
+        {
+          "id": "CGV-LM81",
+          "name": "CGV Vincom Center Landmark 81",
+          "address": "Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [
+                {"time": "17:30", "date": "08-06"},
+                {"time": "20:00", "date": "08-06"},
+                {"time": "22:30", "date": "08-06"},
+                {"time": "10:00", "date": "09-06"},
+                {"time": "12:30", "date": "09-06"},
+                {"time": "15:00", "date": "09-06"},
+                {"time": "17:30", "date": "09-06"},
+                {"time": "20:00", "date": "09-06"},
+                {"time": "22:30", "date": "09-06"},
+                {"time": "10:00", "date": "10-06"},
+                {"time": "12:30", "date": "10-06"},
+                {"time": "15:00", "date": "10-06"},
+                {"time": "17:30", "date": "10-06"},
+                {"time": "20:00", "date": "10-06"},
+                {"time": "22:30", "date": "10-06"},
+                {"time": "10:00", "date": "11-06"},
+                {"time": "12:30", "date": "11-06"},
+                {"time": "15:00", "date": "11-06"},
+                {"time": "17:30", "date": "11-06"},
+                {"time": "20:00", "date": "11-06"},
+                {"time": "22:30", "date": "11-06"},
+                {"time": "10:00", "date": "12-06"},
+                {"time": "12:30", "date": "12-06"},
+                {"time": "15:00", "date": "12-06"},
+                {"time": "17:30", "date": "12-06"},
+                {"time": "20:00", "date": "12-06"},
+                {"time": "22:30", "date": "12-06"},
+                {"time": "10:00", "date": "13-06"},
+                {"time": "12:30", "date": "13-06"},
+                {"time": "15:00", "date": "13-06"},
+                {"time": "17:30", "date": "13-06"},
+                {"time": "20:00", "date": "13-06"},
+                {"time": "22:30", "date": "13-06"}
+            ],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 80000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 120000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            },
+            {
+              "id": "HALL-B",
+              "name": "Hall B",
+              "type": "IMAX",
+              "capacity": 80,
+              "showtimes": [            {"time": "13:30", "date": "09-06"},
+              {"time": "16:00", "date": "09-06"},
+              {"time": "18:30", "date": "09-06"},
+              {"time": "21:00", "date": "09-06"},
+              {"time": "11:00", "date": "10-06"},
+              {"time": "13:30", "date": "10-06"},
+              {"time": "16:00", "date": "10-06"},
+              {"time": "18:30", "date": "10-06"},
+              {"time": "21:00", "date": "10-06"},
+              {"time": "11:00", "date": "11-06"},
+              {"time": "13:30", "date": "11-06"},
+              {"time": "16:00", "date": "11-06"},
+              {"time": "18:30", "date": "11-06"},
+              {"time": "21:00", "date": "11-06"},
+              {"time": "11:00", "date": "12-06"},
+              {"time": "13:30", "date": "12-06"},
+              {"time": "16:00", "date": "12-06"},
+              {"time": "18:30", "date": "12-06"},
+              {"time": "21:00", "date": "12-06"},
+              {"time": "11:00", "date": "13-06"},
+              {"time": "13:30", "date": "13-06"},
+              {"time": "16:00", "date": "13-06"},
+              {"time": "18:30", "date": "13-06"},
+              {"time": "21:00", "date": "13-06"}
+            ],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["D", "E", "F"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 150000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "CGV-CM",
+          "name": "CGV Crescent Mall",
+          "address": "Lầu 5, Crescent Mall, 101 Tôn Dật Tiên, Phú Mỹ Hưng, Q.7, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "20:30", "date": "08-06"},
+              {"time": "10:30", "date": "09-06"},
+              {"time": "13:00", "date": "09-06"},
+              {"time": "15:30", "date": "09-06"},
+              {"time": "18:00", "date": "09-06"},
+              {"time": "20:30", "date": "09-06"},
+              {"time": "10:30", "date": "10-06"},
+              {"time": "13:00", "date": "10-06"},
+              {"time": "15:30", "date": "10-06"},
+              {"time": "18:00", "date": "10-06"},
+              {"time": "20:30", "date": "10-06"},
+              {"time": "10:30", "date": "11-06"},
+              {"time": "13:00", "date": "11-06"},
+              {"time": "15:30", "date": "11-06"},
+              {"time": "18:00", "date": "11-06"},
+              {"time": "20:30", "date": "11-06"},
+              {"time": "10:30", "date": "12-06"},
+              {"time": "13:00", "date": "12-06"},
+              {"time": "15:30", "date": "12-06"},
+              {"time": "18:00", "date": "12-06"},
+              {"time": "20:30", "date": "12-06"},
+              {"time": "10:30", "date": "13-06"},
+              {"time": "13:00", "date": "13-06"},
+              {"time": "15:30", "date": "13-06"},
+              {"time": "18:00", "date": "13-06"},
+              {"time": "20:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "68404ef474dd7d060c07efdb",
+      "title": "MAI",
+      "image": "https://s-aicmscdn.facetoface.vn/f2f-media/24/1/11/1534-main-trailer-poster_659f53e6f07b8.jpg",
+      "bannerImage": "https://images2.thanhnien.vn/528068263637045248/2024/3/1/still-5-17092900079811372174993.jpg",
+      "rating": 4.8,
+      "category": "Tâm Lý",
+      "duration": "2h 28m",
+      "releaseDate": "2024-02-10",
+      "description": "Câu chuyện xúc động về tình yêu, gia đình và những hy sinh thầm lặng của người phụ nữ Việt Nam.",
+      "isNowPlaying": true,
+      "isComingSoon": false,
+      "censorship": "C16 - PHIM CẤM KHÁN GIẢ DƯỚI 16 TUỔI",
+      "language": "Tiếng Việt",
+      "storyline": "Mai là câu chuyện về một người phụ nữ cùng tên với bộ phim, người đã trải qua biến cố và mất đi người chồng của mình. Cô đã phải giấu một bí mật động trời để bảo vệ con gái và gia đình nhỏ của mình.",
+      "director": {
+        "name": "Trấn Thành",
+        "image": "https://images2.thanhnien.vn/528068263637045248/2023/8/17/edit-3673866748894753192094058610540232771086102n-16922488357671188500151.png",
+        "description": "Nam diễn viên, MC và đạo diễn nổi tiếng của showbiz Việt với thành công vang dội từ Bố Già"
+      },
+      "actors": [
+        {
+          "name": "Phương Anh Đào",
+          "image": "https://onoff.vn/blog/wp-content/uploads/2024/03/phuong-anh-dao-la-ai.jpg",
+          "role": "Mai"
+        },
+        {
+          "name": "Tuấn Trần",
+          "image": "https://nguoinoitieng.tv/images/nnt/96/1/bb1v.jpg",
+          "role": "Dương"
+        },
+        {
+          "name": "Trấn Thành",
+          "image": "https://images2.thanhnien.vn/528068263637045248/2023/8/17/edit-3673866748894753192094058610540232771086102n-16922488357671188500151.png",
+          "role": "Khoa"
+        },
+        {
+          "name": "Uyển Ân",
+          "image": "https://bazaarvietnam.vn/wp-content/uploads/2023/02/Harpers-Bazaar-dien-vien-Huynh-Uyen-An-phim-Nha-ba-Nu_03.jpg",
+          "role": "Hà My"
+        }
+      ],
+      "cinemas": [
+        {
+          "id": "CGV-LM81",
+          "name": "CGV Vincom Center Landmark 81",
+          "address": "Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "17:00", "date": "08-06"},
+              {"time": "19:30", "date": "08-06"},
+              {"time": "22:00", "date": "08-06"},
+              {"time": "09:30", "date": "09-06"},
+              {"time": "12:00", "date": "09-06"},
+              {"time": "14:30", "date": "09-06"},
+              {"time": "17:00", "date": "09-06"},
+              {"time": "19:30", "date": "09-06"},
+              {"time": "22:00", "date": "09-06"},
+              {"time": "09:30", "date": "10-06"},
+              {"time": "12:00", "date": "10-06"},
+              {"time": "14:30", "date": "10-06"},
+              {"time": "17:00", "date": "10-06"},
+              {"time": "19:30", "date": "10-06"},
+              {"time": "22:00", "date": "10-06"},
+              {"time": "09:30", "date": "11-06"},
+              {"time": "12:00", "date": "11-06"},
+              {"time": "14:30", "date": "11-06"},
+              {"time": "17:00", "date": "11-06"},
+              {"time": "19:30", "date": "11-06"},
+              {"time": "22:00", "date": "11-06"},
+              {"time": "09:30", "date": "12-06"},
+              {"time": "12:00", "date": "12-06"},
+              {"time": "14:30", "date": "12-06"},
+              {"time": "17:00", "date": "12-06"},
+              {"time": "19:30", "date": "12-06"},
+              {"time": "22:00", "date": "12-06"},
+              {"time": "09:30", "date": "13-06"},
+              {"time": "12:00", "date": "13-06"},
+              {"time": "14:30", "date": "13-06"},
+              {"time": "17:00", "date": "13-06"},
+              {"time": "19:30", "date": "13-06"},
+              {"time": "22:00", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            },
+            {
+              "id": "HALL-B",
+              "name": "Hall B",
+              "type": "IMAX",
+              "capacity": 80,
+              "showtimes": [            {"time": "18:00", "date": "08-06"},
+              {"time": "20:30", "date": "08-06"},
+              {"time": "10:30", "date": "09-06"},
+              {"time": "13:00", "date": "09-06"},
+              {"time": "15:30", "date": "09-06"},
+              {"time": "18:00", "date": "09-06"},
+              {"time": "20:30", "date": "09-06"},
+              {"time": "10:30", "date": "10-06"},
+              {"time": "13:00", "date": "10-06"},
+              {"time": "15:30", "date": "10-06"},
+              {"time": "18:00", "date": "10-06"},
+              {"time": "20:30", "date": "10-06"},
+              {"time": "10:30", "date": "11-06"},
+              {"time": "13:00", "date": "11-06"},
+              {"time": "15:30", "date": "11-06"},
+              {"time": "18:00", "date": "11-06"},
+              {"time": "20:30", "date": "11-06"},
+              {"time": "10:30", "date": "12-06"},
+              {"time": "13:00", "date": "12-06"},
+              {"time": "15:30", "date": "12-06"},
+              {"time": "18:00", "date": "12-06"},
+              {"time": "20:30", "date": "12-06"},
+              {"time": "10:30", "date": "13-06"},
+              {"time": "13:00", "date": "13-06"},
+              {"time": "15:30", "date": "13-06"},
+              {"time": "18:00", "date": "13-06"},
+              {"time": "20:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["D", "E", "F"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 150000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 200000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "CGV-CM",
+          "name": "CGV Crescent Mall",
+          "address": "Lầu 5, Crescent Mall, 101 Tôn Dật Tiên, Phú Mỹ Hưng, Q.7, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "13:30", "date": "07-06"},
+              {"time": "16:00", "date": "07-06"},
+              {"time": "18:30", "date": "07-06"},
+              {"time": "21:00", "date": "07-06"},
+              {"time": "11:00", "date": "08-06"},
+              {"time": "13:30", "date": "08-06"},
+              {"time": "16:00", "date": "08-06"},
+              {"time": "18:30", "date": "08-06"},
+              {"time": "21:00", "date": "08-06"},
+              {"time": "11:00", "date": "09-06"},
+              {"time": "13:30", "date": "09-06"},
+              {"time": "16:00", "date": "09-06"},
+              {"time": "18:30", "date": "09-06"},
+              {"time": "21:00", "date": "09-06"},
+              {"time": "11:00", "date": "10-06"},
+              {"time": "13:30", "date": "10-06"},
+              {"time": "16:00", "date": "10-06"},
+              {"time": "18:30", "date": "10-06"},
+              {"time": "21:00", "date": "10-06"},
+              {"time": "11:00", "date": "11-06"},
+              {"time": "13:30", "date": "11-06"},
+              {"time": "16:00", "date": "11-06"},
+              {"time": "18:30", "date": "11-06"},
+              {"time": "21:00", "date": "11-06"},
+              {"time": "11:00", "date": "12-06"},
+              {"time": "13:30", "date": "12-06"},
+              {"time": "16:00", "date": "12-06"},
+              {"time": "18:30", "date": "12-06"},
+              {"time": "21:00", "date": "12-06"},
+              {"time": "11:00", "date": "13-06"},
+              {"time": "13:30", "date": "13-06"},
+              {"time": "16:00", "date": "13-06"},
+              {"time": "18:30", "date": "13-06"},
+              {"time": "21:00", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "68404ef474dd7d060c07efe5",
+      "title": "The Last Exorcism",
+      "image": "http://3.bp.blogspot.com/_kXMrfqcpNFk/TLbD--D7NXI/AAAAAAAAJJo/tjzJ9uz5l5Q/s1600/the-last-exorcism-poster-3-xl.jpg",
+      "bannerImage": "https://www.filmibeat.com/wimgm/1366x70/desktop/2012/12/135598913426159.jpg",
+      "rating": 4.5,
+      "category": "Horror",
+      "duration": "2h 14m",
+      "releaseDate": "2024-02-10",
+      "description": "Một linh mục gặp rắc rối cho phép đoàn làm phim tài liệu quay lại buổi trừ tà cuối cùng của mình, nhưng lại chạm trán với thế lực tà ác thực sự.",
+      "isNowPlaying": true,
+      "isComingSoon": false,
+      "censorship": "C18 - PHIM CẤM KHÁN GIẢ DƯỚI 18 TUỔI",
+      "language": "Tiếng Anh - Phụ đề Tiếng Việt",
+      "storyline": "Sau nhiều năm thực hiện các cuộc trừ tà, Mục sư Cotton Marcus đã mất niềm tin và quyết định vạch trần sự gian lận bằng cách cho phép một đoàn làm phim ghi lại cuộc trừ tà cuối cùng của ông. Tuy nhiên, ông gặp phải một vụ án làm lung lay sự hoài nghi của ông đến tận gốc rễ.",
+      "director": {
+        "name": "Daniel Stamm",
+        "image": "https://alchetron.com/cdn/daniel-stamm-7fa8cd33-d289-4b57-9adf-f78c08425b8-resize-750.jpeg",
+        "description": "Đạo diễn nổi tiếng với những bộ phim kinh dị và phim tâm lý ly kỳ"
+      },
+      "actors": [
+        {
+          "name": "Patrick Fabian",
+          "image": "https://thenaturalaristocrat.com/wp-content/uploads/2020/10/International_Hamlin_0159_V2_crop-scaled.jpg",
+          "role": "Cotton Marcus"
+        },
+        {
+          "name": "Ashley Bell",
+          "image": "http://hollywoodlife.com/wp-content/uploads/2018/05/ashley-bell-10.jpg?w=680",
+          "role": "Nell Sweetzer"
+        }
+      ],
+      "cinemas": [
+        {
+          "id": "CGV-LM81",
+          "name": "CGV Vincom Center Landmark 81",
+          "address": "Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "17:30", "date": "08-06"},
+              {"time": "20:00", "date": "08-06"},
+              {"time": "22:30", "date": "08-06"},
+              {"time": "10:00", "date": "09-06"},
+              {"time": "12:30", "date": "09-06"},
+              {"time": "15:00", "date": "09-06"},
+              {"time": "17:30", "date": "09-06"},
+              {"time": "20:00", "date": "09-06"},
+              {"time": "22:30", "date": "09-06"},
+              {"time": "10:00", "date": "10-06"},
+              {"time": "12:30", "date": "10-06"},
+              {"time": "15:00", "date": "10-06"},
+              {"time": "17:30", "date": "10-06"},
+              {"time": "20:00", "date": "10-06"},
+              {"time": "22:30", "date": "10-06"},
+              {"time": "10:00", "date": "11-06"},
+              {"time": "12:30", "date": "11-06"},
+              {"time": "15:00", "date": "11-06"},
+              {"time": "17:30", "date": "11-06"},
+              {"time": "20:00", "date": "11-06"},
+              {"time": "22:30", "date": "11-06"},
+              {"time": "10:00", "date": "12-06"},
+              {"time": "12:30", "date": "12-06"},
+              {"time": "15:00", "date": "12-06"},
+              {"time": "17:30", "date": "12-06"},
+              {"time": "20:00", "date": "12-06"},
+              {"time": "22:30", "date": "12-06"},
+              {"time": "10:00", "date": "13-06"},
+              {"time": "12:30", "date": "13-06"},
+              {"time": "15:00", "date": "13-06"},
+              {"time": "17:30", "date": "13-06"},
+              {"time": "20:00", "date": "13-06"},
+              {"time": "22:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            },
+            {
+              "id": "HALL-B",
+              "name": "Hall B",
+              "type": "IMAX",
+              "capacity": 80,
+              "showtimes": [            {"time": "16:00", "date": "07-06"},
+              {"time": "18:30", "date": "07-06"},
+              {"time": "21:00", "date": "07-06"},
+              {"time": "11:00", "date": "08-06"},
+              {"time": "13:30", "date": "08-06"},
+              {"time": "16:00", "date": "08-06"},
+              {"time": "18:30", "date": "08-06"},
+              {"time": "21:00", "date": "08-06"},
+              {"time": "11:00", "date": "09-06"},
+              {"time": "13:30", "date": "09-06"},
+              {"time": "16:00", "date": "09-06"},
+              {"time": "18:30", "date": "09-06"},
+              {"time": "21:00", "date": "09-06"},
+              {"time": "11:00", "date": "10-06"},
+              {"time": "13:30", "date": "10-06"},
+              {"time": "16:00", "date": "10-06"},
+              {"time": "18:30", "date": "10-06"},
+              {"time": "21:00", "date": "10-06"},
+              {"time": "11:00", "date": "11-06"},
+              {"time": "13:30", "date": "11-06"},
+              {"time": "16:00", "date": "11-06"},
+              {"time": "18:30", "date": "11-06"},
+              {"time": "21:00", "date": "11-06"},
+              {"time": "11:00", "date": "12-06"},
+              {"time": "13:30", "date": "12-06"},
+              {"time": "16:00", "date": "12-06"},
+              {"time": "18:30", "date": "12-06"},
+              {"time": "21:00", "date": "12-06"},
+              {"time": "11:00", "date": "13-06"},
+              {"time": "13:30", "date": "13-06"},
+              {"time": "16:00", "date": "13-06"},
+              {"time": "18:30", "date": "13-06"},
+              {"time": "21:00", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["D", "E", "F"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 150000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 200000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "CGV-CM",
+          "name": "CGV Crescent Mall",
+          "address": "Lầu 5, Crescent Mall, 101 Tôn Dật Tiên, Phú Mỹ Hưng, Q.7, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "20:30", "date": "07-06"},
+              {"time": "10:30", "date": "08-06"},
+              {"time": "13:00", "date": "08-06"},
+              {"time": "15:30", "date": "08-06"},
+              {"time": "18:00", "date": "08-06"},
+              {"time": "20:30", "date": "08-06"},
+              {"time": "10:30", "date": "09-06"},
+              {"time": "13:00", "date": "09-06"},
+              {"time": "15:30", "date": "09-06"},
+              {"time": "18:00", "date": "09-06"},
+              {"time": "20:30", "date": "09-06"},
+              {"time": "10:30", "date": "10-06"},
+              {"time": "13:00", "date": "10-06"},
+              {"time": "15:30", "date": "10-06"},
+              {"time": "18:00", "date": "10-06"},
+              {"time": "20:30", "date": "10-06"},
+              {"time": "10:30", "date": "11-06"},
+              {"time": "13:00", "date": "11-06"},
+              {"time": "15:30", "date": "11-06"},
+              {"time": "18:00", "date": "11-06"},
+              {"time": "20:30", "date": "11-06"},
+              {"time": "10:30", "date": "12-06"},
+              {"time": "13:00", "date": "12-06"},
+              {"time": "15:30", "date": "12-06"},
+              {"time": "18:00", "date": "12-06"},
+              {"time": "20:30", "date": "12-06"},
+              {"time": "10:30", "date": "13-06"},
+              {"time": "13:00", "date": "13-06"},
+              {"time": "15:30", "date": "13-06"},
+              {"time": "18:00", "date": "13-06"},
+              {"time": "20:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "68404ef474dd7d060c07efe6",
+      "title": "Nghề Siêu Dễ",
+      "image": "https://khenphim.com/wp-content/uploads/2022/04/nghe-sieu-de-1-poster.jpg",
+      "bannerImage": "https://channel.mediacdn.vn/428462621602512896/2022/4/25/photo-2-1650879396800944056440.jpg",
+      "rating": 4.6,
+      "category": "Comedy",
+      "duration": "2h 56m",
+      "releaseDate": "2024-02-10",
+      "description": "Câu chuyện hài hước về một nhóm bạn trẻ với ước mơ khởi nghiệp.",
+      "isNowPlaying": true,
+      "isComingSoon": false,
+      "censorship": "P - PHIM DÀNH CHO MỌI ĐỐI TƯỢNG",
+      "language": "Tiếng Việt",
+      "storyline": "Bộ phim xoay quanh câu chuyện của một nhóm bạn trẻ với ước mơ khởi nghiệp. Họ gặp nhiều tình huống dở khóc dở cười khi cố gắng thực hiện ước mơ của mình.",
+      "director": {
+        "name": "Võ Thanh Hòa",
+        "image": "https://media.sohuutritue.net.vn/files/ctvmn/2022/12/14/dscf3866-1656.jpg",
+        "description": "Đạo diễn trẻ với nhiều tác phẩm hài được yêu thích"
+      },
+      "actors": [
+        {
+          "name": "Thu Trang",
+          "image": "https://photo-baomoi.bmcdn.me/w700_r1/2022_09_24_105_43811418/e8136d23aa61433f1a70.jpg",
+          "role": "Mai Anh"
+        },
+        {
+          "name": "Tiến Luật",
+          "image": "https://35express.org/wp-content/uploads/2021/05/tien-luat-la-ai-2-35express-768x576.jpg",
+          "role": "Quang"
+        },
+        {
+          "name": "Hứa Vĩ Văn",
+          "image": "https://bazaarvietnam.vn/wp-content/uploads/2022/06/harper-bazaar-phim-cua-hua-vi-van-14.jpeg",
+          "role": "Ông Thái"
+        },
+        {
+          "name": "Kiều Minh Tuấn",
+          "image": "https://s1.media.ngoisao.vn/resize_580/news/2022/09/14/moi-duoc-khen-vi-vua-dep-vua-tre-kieu-minh-tuan-quay-lai-ve-gia-nua-thoi-ben-cat-phuong-6-ngoisaovn-w799-h1000.jpg",
+          "role": "Phú"
+        },
+        {
+          "name": "Huỳnh Phương",
+          "image": "https://i.vgt.vn/2021/9/16/huynh-phuong-faptv-tiet-lo-qua-khu-sa-doa-thieu-no-den-muc-nhay-cau-edf-6032616.jpg",
+          "role": "Vinh"
+        },
+        {
+          "name": "Quang Tuấn",
+          "image": "https://static2.yan.vn/YanNews/2167221/202006/quangtuan1d6d77497-1-7cc7dbf9.jpg",
+          "role": "Mèo"
+        }
+      ],
+      "cinemas": [
+        {
+          "id": "CGV-LM81",
+          "name": "CGV Vincom Center Landmark 81",
+          "address": "Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "22:30", "date": "08-06"},
+              {"time": "10:00", "date": "09-06"},
+              {"time": "12:30", "date": "09-06"},
+              {"time": "15:00", "date": "09-06"},
+              {"time": "17:30", "date": "09-06"},
+              {"time": "20:00", "date": "09-06"},
+              {"time": "22:30", "date": "09-06"},
+              {"time": "10:00", "date": "10-06"},
+              {"time": "12:30", "date": "10-06"},
+              {"time": "15:00", "date": "10-06"},
+              {"time": "17:30", "date": "10-06"},
+              {"time": "20:00", "date": "10-06"},
+              {"time": "22:30", "date": "10-06"},
+              {"time": "10:00", "date": "11-06"},
+              {"time": "12:30", "date": "11-06"},
+              {"time": "15:00", "date": "11-06"},
+              {"time": "17:30", "date": "11-06"},
+              {"time": "20:00", "date": "11-06"},
+              {"time": "22:30", "date": "11-06"},
+              {"time": "10:00", "date": "12-06"},
+              {"time": "12:30", "date": "12-06"},
+              {"time": "15:00", "date": "12-06"},
+              {"time": "17:30", "date": "12-06"},
+              {"time": "20:00", "date": "12-06"},
+              {"time": "22:30", "date": "12-06"},
+              {"time": "10:00", "date": "13-06"},
+              {"time": "12:30", "date": "13-06"},
+              {"time": "15:00", "date": "13-06"},
+              {"time": "17:30", "date": "13-06"},
+              {"time": "20:00", "date": "13-06"},
+              {"time": "22:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            },
+            {
+              "id": "HALL-B",
+              "name": "Hall B",
+              "type": "IMAX",
+              "capacity": 80,
+              "showtimes": [            {"time": "18:30", "date": "09-06"},
+            {"time": "21:00", "date": "09-06"},
+            {"time": "11:00", "date": "10-06"},
+            {"time": "13:30", "date": "10-06"},
+            {"time": "16:00", "date": "10-06"},
+            {"time": "18:30", "date": "10-06"},
+            {"time": "21:00", "date": "10-06"},
+            {"time": "11:00", "date": "11-06"},
+            {"time": "13:30", "date": "11-06"},
+            {"time": "16:00", "date": "11-06"},
+            {"time": "18:30", "date": "11-06"},
+            {"time": "21:00", "date": "11-06"},
+            {"time": "11:00", "date": "12-06"},
+            {"time": "13:30", "date": "12-06"},
+            {"time": "16:00", "date": "12-06"},
+            {"time": "18:30", "date": "12-06"},
+            {"time": "21:00", "date": "12-06"},
+            {"time": "11:00", "date": "13-06"},
+            {"time": "13:30", "date": "13-06"},
+            {"time": "16:00", "date": "13-06"},
+            {"time": "18:30", "date": "13-06"},
+            {"time": "21:00", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["D", "E", "F"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 150000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 200000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "CGV-CM",
+          "name": "CGV Crescent Mall",
+          "address": "Lầu 5, Crescent Mall, 101 Tôn Dật Tiên, Phú Mỹ Hưng, Q.7, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            
+              {"time": "13:00", "date": "08-06"},
+              {"time": "15:30", "date": "08-06"},
+              {"time": "18:00", "date": "08-06"},
+              {"time": "20:30", "date": "08-06"},
+              {"time": "10:30", "date": "09-06"},
+              {"time": "13:00", "date": "09-06"},
+              {"time": "15:30", "date": "09-06"},
+              {"time": "18:00", "date": "09-06"},
+              {"time": "20:30", "date": "09-06"},
+              {"time": "10:30", "date": "10-06"},
+              {"time": "13:00", "date": "10-06"},
+              {"time": "15:30", "date": "10-06"},
+              {"time": "18:00", "date": "10-06"},
+              {"time": "20:30", "date": "10-06"},
+              {"time": "10:30", "date": "11-06"},
+              {"time": "13:00", "date": "11-06"},
+              {"time": "15:30", "date": "11-06"},
+              {"time": "18:00", "date": "11-06"},
+              {"time": "20:30", "date": "11-06"},
+              {"time": "10:30", "date": "12-06"},
+              {"time": "13:00", "date": "12-06"},
+              {"time": "15:30", "date": "12-06"},
+              {"time": "18:00", "date": "12-06"},
+              {"time": "20:30", "date": "12-06"},
+              {"time": "10:30", "date": "13-06"},
+              {"time": "13:00", "date": "13-06"},
+              {"time": "15:30", "date": "13-06"},
+              {"time": "18:00", "date": "13-06"},
+              {"time": "20:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "68404ef474dd7d060c07efe8",
+      "title": "Minions: Sự trỗi dậy của Gru",
+      "image": "https://khenphim.com/wp-content/uploads/2022/06/Minions-The-Raise-of-Gru-1-poster_KP.webp",
+      "bannerImage": "https://api.time.com/wp-content/uploads/2022/06/2503_FFP_01907.jpg?quality=85&w=1920",
+      "rating": 4.9,
+      "category": "Animation",
+      "duration": "2h 11m",
+      "releaseDate": "2023-05-27",
+      "description": "Câu chuyện về nguồn gốc của Gru và những tên lính Minion đáng yêu.",
+      "isNowPlaying": true,
+      "isComingSoon": false,
+      "censorship": "P - PHIM DÀNH CHO MỌI ĐỐI TƯỢNG",
+      "language": "Tiếng Anh - Phụ đề Tiếng Việt",
+      "storyline": "Bộ phim kể về thời niên thiếu của Gru, khi cậu bé 12 tuổi mơ ước trở thành một siêu ác nhân. Cùng với sự giúp đỡ của những tên lính Minion trung thành, Gru lên kế hoạch để gia nhập một nhóm ác nhân huyền thoại.",
+      "director": {
+        "name": "Kyle Balda",
+        "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uay7ZJLuW47ClGfQ4FGWgXZOerv.jpg",
+        "description": "Đạo diễn nổi tiếng với series phim Minions và Despicable Me"
+      },
+      "actors": [
+        {
+          "name": "Steve Carell",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Steve_Carell_November_2014.jpg/800px-Steve_Carell_November_2014.jpg",
+          "role": "Gru (voice)"
+        },
+        {
+          "name": "Pierre Coffin",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTUzOTQ3OTA3OF5BMl5BanBnXkFtZTcwNzEzNTMyOA@@._V1_FMjpg_UX1000_.jpg",
+          "role": "Minions (voice)"
+        }
+      ],
+      "cinemas": [
+        {
+          "id": "CGV-LM81",
+          "name": "CGV Vincom Center Landmark 81",
+          "address": "Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            
+              {"time": "17:30", "date": "08-06"},
+              {"time": "20:00", "date": "08-06"},
+              {"time": "22:30", "date": "08-06"},
+              {"time": "10:00", "date": "09-06"},
+              {"time": "12:30", "date": "09-06"},
+              {"time": "15:00", "date": "09-06"},
+              {"time": "17:30", "date": "09-06"},
+              {"time": "20:00", "date": "09-06"},
+              {"time": "22:30", "date": "09-06"},
+              {"time": "10:00", "date": "10-06"},
+              {"time": "12:30", "date": "10-06"},
+              {"time": "15:00", "date": "10-06"},
+              {"time": "17:30", "date": "10-06"},
+              {"time": "20:00", "date": "10-06"},
+              {"time": "22:30", "date": "10-06"},
+              {"time": "10:00", "date": "11-06"},
+              {"time": "12:30", "date": "11-06"},
+              {"time": "15:00", "date": "11-06"},
+              {"time": "17:30", "date": "11-06"},
+              {"time": "20:00", "date": "11-06"},
+              {"time": "22:30", "date": "11-06"},
+              {"time": "10:00", "date": "12-06"},
+              {"time": "12:30", "date": "12-06"},
+              {"time": "15:00", "date": "12-06"},
+              {"time": "17:30", "date": "12-06"},
+              {"time": "20:00", "date": "12-06"},
+              {"time": "22:30", "date": "12-06"},
+              {"time": "10:00", "date": "13-06"},
+              {"time": "12:30", "date": "13-06"},
+              {"time": "15:00", "date": "13-06"},
+              {"time": "17:30", "date": "13-06"},
+              {"time": "20:00", "date": "13-06"},
+              {"time": "22:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            },
+            {
+              "id": "HALL-B",
+              "name": "Hall B",
+              "type": "IMAX",
+              "capacity": 80,
+              "showtimes": [            {"time": "11:00", "date": "07-06"},
+              {"time": "13:30", "date": "07-06"},
+              {"time": "16:00", "date": "07-06"},
+              {"time": "18:30", "date": "07-06"},
+              {"time": "21:00", "date": "07-06"},
+              {"time": "11:00", "date": "08-06"},
+              {"time": "13:30", "date": "08-06"},
+              {"time": "16:00", "date": "08-06"},
+              {"time": "18:30", "date": "08-06"},
+              {"time": "21:00", "date": "08-06"},
+              {"time": "11:00", "date": "09-06"},
+              {"time": "13:30", "date": "09-06"},
+              {"time": "16:00", "date": "09-06"},
+              {"time": "18:30", "date": "09-06"},
+              {"time": "21:00", "date": "09-06"},
+              {"time": "11:00", "date": "10-06"},
+              {"time": "13:30", "date": "10-06"},
+              {"time": "16:00", "date": "10-06"},
+              {"time": "18:30", "date": "10-06"},
+              {"time": "21:00", "date": "10-06"},
+              {"time": "11:00", "date": "11-06"},
+              {"time": "13:30", "date": "11-06"},
+              {"time": "16:00", "date": "11-06"},
+              {"time": "18:30", "date": "11-06"},
+              {"time": "21:00", "date": "11-06"},
+              {"time": "11:00", "date": "12-06"},
+              {"time": "13:30", "date": "12-06"},
+              {"time": "16:00", "date": "12-06"},
+              {"time": "18:30", "date": "12-06"},
+              {"time": "21:00", "date": "12-06"},
+              {"time": "11:00", "date": "13-06"},
+              {"time": "13:30", "date": "13-06"},
+              {"time": "16:00", "date": "13-06"},
+              {"time": "18:30", "date": "13-06"},
+              {"time": "21:00", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["D", "E", "F"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 150000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 200000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "CGV-CM",
+          "name": "CGV Crescent Mall",
+          "address": "Lầu 5, Crescent Mall, 101 Tôn Dật Tiên, Phú Mỹ Hưng, Q.7, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [ {"time": "10:30", "date": "07-06"},
+              {"time": "13:00", "date": "07-06"},
+              {"time": "15:30", "date": "07-06"},
+              {"time": "18:00", "date": "07-06"},
+              {"time": "20:30", "date": "07-06"},
+              {"time": "10:30", "date": "08-06"},
+              {"time": "13:00", "date": "08-06"},
+              {"time": "15:30", "date": "08-06"},
+              {"time": "18:00", "date": "08-06"},
+              {"time": "20:30", "date": "08-06"},
+              {"time": "10:30", "date": "09-06"},
+              {"time": "13:00", "date": "09-06"},
+              {"time": "15:30", "date": "09-06"},
+              {"time": "18:00", "date": "09-06"},
+              {"time": "20:30", "date": "09-06"},
+              {"time": "10:30", "date": "10-06"},
+              {"time": "13:00", "date": "10-06"},
+              {"time": "15:30", "date": "10-06"},
+              {"time": "18:00", "date": "10-06"},
+              {"time": "20:30", "date": "10-06"},
+              {"time": "10:30", "date": "11-06"},
+              {"time": "13:00", "date": "11-06"},
+              {"time": "15:30", "date": "11-06"},
+              {"time": "18:00", "date": "11-06"},
+              {"time": "20:30", "date": "11-06"},
+              {"time": "10:30", "date": "12-06"}
+  ],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "68404ef474dd7d060c07efea",
+      "title": "The Silent Sea",
+      "image": "https://flxt.tmsimg.com/assets/p21059493_b_v9_aa.jpg",
+      "bannerImage": "https://www.nme.com/wp-content/uploads/2021/02/silent-sea-netflix@2000x1270.jpg",
+      "rating": 4.9,
+      "category": "Sci-Fi",
+      "duration": "2h 11mm",
+      "releaseDate": "2024-22-24",
+      "description": "Một nhiệm vụ đặc biệt được giao cho đội ngũ phi hành gia khám phá bí mật tại một trạm nghiên cứu bị bỏ hoang trên Mặt Trăng.",
+      "isNowPlaying": true,
+      "isComingSoon": false,
+      "censorship": "C16 - PHIM CẤM KHÁN GIẢ DƯỚI 16 TUỔI",
+      "language": "Tiếng Hàn",
+      "storyline": "Trong tương lai khi Trái Đất khan hiếm tài nguyên, một nhóm các nhà khoa học và binh lính được cử lên Mặt Trăng để phục hồi một mẫu nghiên cứu có thể thay đổi vận mệnh nhân loại.",
+      "director": {
+        "name": "Choi Hang-yong",
+        "image": "https://magazinema.es/wp-content/uploads/2021/12/The-Silent-Sea-MAgaZinema-2.jpg",
+        "description": "Đạo diễn Hàn Quốc nổi bật với các bộ phim khoa học viễn tưởng và phong cách dựng phim đầy kịch tính."
+      },
+      "actors": [
+        {
+          "name": "Bae Doona",
+          "image": "https://www.hancinema.net/photos/fullsizephoto896550.jpg",
+          "role": "Song Ji-an"
+        },
+        {
+          "name": "Gong Yoo",
+          "image": "https://3.bp.blogspot.com/-roQcrKJ2OXk/W0VWw4iD_FI/AAAAAAAAdEY/18DbUmoQYsAktjkn_L2s4QsNoMRFItvegCLcBGAs/s1600/020.png",
+          "role": "Han Yoon-jae"
+        },
+        {
+          "name": "Lee Joon",
+          "image": "https://i.mydramalist.com/xLdjw_5_c.jpg",
+          "role": "Ryu Tae-seok"
+        }
+      ],
+      "cinemas": [
+        {
+          "id": "CGV-LM81",
+          "name": "CGV Vincom Center Landmark 81",
+          "address": "Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "15:00", "date": "09-06"},
+              {"time": "17:30", "date": "09-06"},
+              {"time": "20:00", "date": "09-06"},
+              {"time": "22:30", "date": "09-06"},
+              {"time": "10:00", "date": "10-06"},
+              {"time": "12:30", "date": "10-06"},
+              {"time": "15:00", "date": "10-06"},
+              {"time": "17:30", "date": "10-06"},
+              {"time": "20:00", "date": "10-06"},
+              {"time": "22:30", "date": "10-06"},
+              {"time": "10:00", "date": "11-06"},
+              {"time": "12:30", "date": "11-06"},
+              {"time": "15:00", "date": "11-06"},
+              {"time": "17:30", "date": "11-06"},
+              {"time": "20:00", "date": "11-06"},
+              {"time": "22:30", "date": "11-06"},
+              {"time": "10:00", "date": "12-06"},
+              {"time": "12:30", "date": "12-06"},
+              {"time": "15:00", "date": "12-06"},
+              {"time": "17:30", "date": "12-06"},
+              {"time": "20:00", "date": "12-06"},
+              {"time": "22:30", "date": "12-06"},
+              {"time": "10:00", "date": "13-06"},
+              {"time": "12:30", "date": "13-06"},
+              {"time": "15:00", "date": "13-06"},
+              {"time": "17:30", "date": "13-06"},
+              {"time": "20:00", "date": "13-06"},
+              {"time": "22:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            },
+            {
+              "id": "HALL-B",
+              "name": "Hall B",
+              "type": "IMAX",
+              "capacity": 80,
+              "showtimes": [            {"time": "13:30", "date": "09-06"},
+              {"time": "16:00", "date": "09-06"},
+              {"time": "18:30", "date": "09-06"},
+              {"time": "21:00", "date": "09-06"},
+              {"time": "11:00", "date": "10-06"},
+              {"time": "13:30", "date": "10-06"},
+              {"time": "16:00", "date": "10-06"},
+              {"time": "18:30", "date": "10-06"},
+              {"time": "21:00", "date": "10-06"},
+              {"time": "11:00", "date": "11-06"},
+              {"time": "13:30", "date": "11-06"},
+              {"time": "16:00", "date": "11-06"},
+              {"time": "18:30", "date": "11-06"},
+              {"time": "21:00", "date": "11-06"},
+              {"time": "11:00", "date": "12-06"},
+              {"time": "13:30", "date": "12-06"},
+              {"time": "16:00", "date": "12-06"},
+              {"time": "18:30", "date": "12-06"},
+              {"time": "21:00", "date": "12-06"},
+              {"time": "11:00", "date": "13-06"},
+              {"time": "13:30", "date": "13-06"},
+              {"time": "16:00", "date": "13-06"},
+              {"time": "18:30", "date": "13-06"},
+              {"time": "21:00", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["D", "E", "F"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 150000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 200000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "CGV-CM",
+          "name": "CGV Crescent Mall",
+          "address": "Lầu 5, Crescent Mall, 101 Tôn Dật Tiên, Phú Mỹ Hưng, Q.7, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "18:00", "date": "07-06"},
+              {"time": "20:30", "date": "07-06"},
+              {"time": "10:30", "date": "08-06"},
+              {"time": "13:00", "date": "08-06"},
+              {"time": "15:30", "date": "08-06"},
+              {"time": "18:00", "date": "08-06"},
+              {"time": "20:30", "date": "08-06"},
+              {"time": "10:30", "date": "09-06"},
+              {"time": "13:00", "date": "09-06"},
+              {"time": "15:30", "date": "09-06"},
+              {"time": "18:00", "date": "09-06"},
+              {"time": "20:30", "date": "09-06"},
+              {"time": "10:30", "date": "10-06"},
+              {"time": "13:00", "date": "10-06"},
+              {"time": "15:30", "date": "10-06"},
+              {"time": "18:00", "date": "10-06"},
+              {"time": "20:30", "date": "10-06"},
+              {"time": "10:30", "date": "11-06"},
+              {"time": "13:00", "date": "11-06"},
+              {"time": "15:30", "date": "11-06"},
+              {"time": "18:00", "date": "11-06"},
+              {"time": "20:30", "date": "11-06"},
+              {"time": "10:30", "date": "12-06"},
+              {"time": "13:00", "date": "12-06"},
+              {"time": "15:30", "date": "12-06"},
+              {"time": "18:00", "date": "12-06"},
+              {"time": "20:30", "date": "12-06"},
+              {"time": "10:30", "date": "13-06"},
+              {"time": "13:00", "date": "13-06"},
+              {"time": "15:30", "date": "13-06"},
+              {"time": "18:00", "date": "13-06"},
+              {"time": "20:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "68404ef474dd7d060c07efee",
+      "title": "Godzilla x Kong",
+      "image": "https://posterspy.com/wp-content/uploads/2023/12/GXK.jpg",
+      "bannerImage": "https://wallpapercave.com/wp/wp9290386.jpg",
+      "rating": 4.7,
+      "category": "Action",
+      "duration": "1h 55m",
+      "releaseDate": "2024-03-29",
+      "description": "Trận chiến hoành tráng giữa hai quái vật huyền thoại Godzilla và Kong khi họ đối đầu với một mối đe dọa mới từ sâu trong Trái Đất.",
+      "isNowPlaying": true,
+      "isComingSoon": false,
+      "censorship": "C13 - PHIM CẤM KHÁN GIẢ DƯỚI 13 TUỔI",
+      "language": "Tiếng Anh",
+      "storyline": "Godzilla và Kong buộc phải hợp lực đối mặt với một mối nguy hiểm ẩn sâu trong Trái Đất, đe dọa sự tồn vong của nhân loại. Một cuộc hành trình mới được mở ra, hé lộ nguồn gốc và sức mạnh thực sự của cả hai sinh vật khổng lồ.",
+      "director": {
+        "name": "Adam Wingard",
+        "image": "https://alchetron.com/cdn/adam-wingard-1939c337-e910-4d02-b2c1-c300de28363-resize-750.jpg",
+        "description": "Đạo diễn người Mỹ nổi tiếng với phong cách hành động kịch tính và từng chỉ đạo Godzilla vs. Kong (2021)."
+      },
+      "actors": [
+        {
+          "name": "Rebecca Hall",
+          "image": "http://celebmafia.com/wp-content/uploads/2016/05/rebecca-hall-the-bfg-photocall-at-cannes-film-festival-5-14-2016-1.jpg",
+          "role": "Ilene Andrews"
+        },
+        {
+          "name": "Brian Tyree Henry",
+          "image": "https://m.media-amazon.com/images/M/MV5BODhjMzM0YjktMzc4Ni00MWI0LWExZjgtMmYyMjEzOTE1MWU4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "role": "Bernie Hayes"
+        },
+        {
+          "name": "Dan Stevens",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTUwNzUzMzI3N15BMl5BanBnXkFtZTgwODU4MjkxMDE@._V1_FMjpg_UX1000_.jpg",
+          "role": "Trapper"
+        }
+      ],
+      "cinemas": [
+        {
+          "id": "CGV-LM81",
+          "name": "CGV Vincom Center Landmark 81",
+          "address": "Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "15:00", "date": "09-06"},
+              {"time": "17:30", "date": "09-06"},
+              {"time": "20:00", "date": "09-06"},
+              {"time": "22:30", "date": "09-06"},
+              {"time": "10:00", "date": "10-06"},
+              {"time": "12:30", "date": "10-06"},
+              {"time": "15:00", "date": "10-06"},
+              {"time": "17:30", "date": "10-06"},
+              {"time": "20:00", "date": "10-06"},
+              {"time": "22:30", "date": "10-06"},
+              {"time": "10:00", "date": "11-06"},
+              {"time": "12:30", "date": "11-06"},
+              {"time": "15:00", "date": "11-06"},
+              {"time": "17:30", "date": "11-06"},
+              {"time": "20:00", "date": "11-06"},
+              {"time": "22:30", "date": "11-06"},
+              {"time": "10:00", "date": "12-06"},
+              {"time": "12:30", "date": "12-06"},
+              {"time": "15:00", "date": "12-06"},
+              {"time": "17:30", "date": "12-06"},
+              {"time": "20:00", "date": "12-06"},
+              {"time": "22:30", "date": "12-06"},
+              {"time": "10:00", "date": "13-06"},
+              {"time": "12:30", "date": "13-06"},
+              {"time": "15:00", "date": "13-06"},
+              {"time": "17:30", "date": "13-06"},
+              {"time": "20:00", "date": "13-06"},
+              {"time": "22:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            },
+            {
+              "id": "HALL-B",
+              "name": "Hall B",
+              "type": "IMAX",
+              "capacity": 80,
+              "showtimes": [            {"time": "13:30", "date": "09-06"},
+              {"time": "16:00", "date": "09-06"},
+              {"time": "18:30", "date": "09-06"},
+              {"time": "21:00", "date": "09-06"},
+              {"time": "11:00", "date": "10-06"},
+              {"time": "13:30", "date": "10-06"},
+              {"time": "16:00", "date": "10-06"},
+              {"time": "18:30", "date": "10-06"},
+              {"time": "21:00", "date": "10-06"},
+              {"time": "11:00", "date": "11-06"},
+              {"time": "13:30", "date": "11-06"},
+              {"time": "16:00", "date": "11-06"},
+              {"time": "18:30", "date": "11-06"},
+              {"time": "21:00", "date": "11-06"},
+              {"time": "11:00", "date": "12-06"},
+              {"time": "13:30", "date": "12-06"},
+              {"time": "16:00", "date": "12-06"},
+              {"time": "18:30", "date": "12-06"},
+              {"time": "21:00", "date": "12-06"},
+              {"time": "11:00", "date": "13-06"},
+              {"time": "13:30", "date": "13-06"},
+              {"time": "16:00", "date": "13-06"},
+              {"time": "18:30", "date": "13-06"},
+              {"time": "21:00", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["D", "E", "F"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 150000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 200000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "CGV-CM",
+          "name": "CGV Crescent Mall",
+          "address": "Lầu 5, Crescent Mall, 101 Tôn Dật Tiên, Phú Mỹ Hưng, Q.7, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "18:00", "date": "07-06"},
+              {"time": "20:30", "date": "07-06"},
+              {"time": "10:30", "date": "08-06"},
+              {"time": "13:00", "date": "08-06"},
+              {"time": "15:30", "date": "08-06"},
+              {"time": "18:00", "date": "08-06"},
+              {"time": "20:30", "date": "08-06"},
+              {"time": "10:30", "date": "09-06"},
+              {"time": "13:00", "date": "09-06"},
+              {"time": "15:30", "date": "09-06"},
+              {"time": "18:00", "date": "09-06"},
+              {"time": "20:30", "date": "09-06"},
+              {"time": "10:30", "date": "10-06"},
+              {"time": "13:00", "date": "10-06"},
+              {"time": "15:30", "date": "10-06"},
+              {"time": "18:00", "date": "10-06"},
+              {"time": "20:30", "date": "10-06"},
+              {"time": "10:30", "date": "11-06"},
+              {"time": "13:00", "date": "11-06"},
+              {"time": "15:30", "date": "11-06"},
+              {"time": "18:00", "date": "11-06"},
+              {"time": "20:30", "date": "11-06"},
+              {"time": "10:30", "date": "12-06"},
+              {"time": "13:00", "date": "12-06"},
+              {"time": "15:30", "date": "12-06"},
+              {"time": "18:00", "date": "12-06"},
+              {"time": "20:30", "date": "12-06"},
+              {"time": "10:30", "date": "13-06"},
+              {"time": "13:00", "date": "13-06"},
+              {"time": "15:30", "date": "13-06"},
+              {"time": "18:00", "date": "13-06"},
+              {"time": "20:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "68404ef474dd7d060c07eff9",
+      "title": "Dune: Part Two",
+      "image": "http://www.beautifulballad.org/wp-content/uploads/2024/01/dune-part-two-DUNE2_VERT_MAIN_2764x4096_DOM_REV_rgb.jpg",
+      "bannerImage": "https://fandomwire.com/wp-content/uploads/2021/10/248435279_577600186804881_3881541394708349194_n-scaled.jpg",
+      "rating": 4.9,
+      "category": "Sci-Fi",
+      "duration": "2h 46m",
+      "releaseDate": "2024-10-5",
+      "description": "Paul Atreides hợp tác với người Fremen để mang lại hòa bình cho hành tinh sa mạc Arrakis. Sử dụng gia vị của hành tinh, anh phát động một cuộc nổi loạn chống lại các thế lực đã phá hủy gia đình anh.",
+      "isNowPlaying": false,
+      "isComingSoon": true,
+      "censorship": "C13 - PHIM CẤM KHÁN GIẢ DƯỚI 13 TUỔI",
+      "language": "Tiếng Anh - Phụ đề Tiếng Việt",
+      "storyline": "Paul Atreides hợp tác với người Fremen để mang lại hòa bình cho hành tinh sa mạc Arrakis. Sử dụng gia vị của hành tinh, anh phát động một cuộc nổi loạn chống lại các thế lực đã phá hủy gia đình anh.",
+      "director": {
+        "name": "Denis Villeneuve",
+        "image": "https://deadline.com/wp-content/uploads/2016/05/denis-villeneuve.jpg?w=1024",
+        "description": "Đạo diễn nổi tiếng được biết đến với Blade Runner 2049 và Arrival"
+      },
+      "actors": [
+        {
+          "name": "Timothée Chalamet",
+          "image": "https://es.web.img3.acsta.net/pictures/18/01/23/15/36/0550263.jpg",
+          "role": "Paul Atreides"
+        },
+        {
+          "name": "Zendaya",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Zendaya_-_2019_by_Glenn_Francis.jpg/800px-Zendaya_-_2019_by_Glenn_Francis.jpg",
+          "role": "Chani"
+        }
+      ],
+      "cinemas": [
+        {
+          "id": "CGV-LM81",
+          "name": "CGV Vincom Center Landmark 81",
+          "address": "Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "15:00", "date": "09-06"},
+              {"time": "17:30", "date": "09-06"},
+              {"time": "20:00", "date": "09-06"},
+              {"time": "22:30", "date": "09-06"},
+              {"time": "10:00", "date": "10-06"},
+              {"time": "12:30", "date": "10-06"},
+              {"time": "15:00", "date": "10-06"},
+              {"time": "17:30", "date": "10-06"},
+              {"time": "20:00", "date": "10-06"},
+              {"time": "22:30", "date": "10-06"},
+              {"time": "10:00", "date": "11-06"},
+              {"time": "12:30", "date": "11-06"},
+              {"time": "15:00", "date": "11-06"},
+              {"time": "17:30", "date": "11-06"},
+              {"time": "20:00", "date": "11-06"},
+              {"time": "22:30", "date": "11-06"},
+              {"time": "10:00", "date": "12-06"},
+              {"time": "12:30", "date": "12-06"},
+              {"time": "15:00", "date": "12-06"},
+              {"time": "17:30", "date": "12-06"},
+              {"time": "20:00", "date": "12-06"},
+              {"time": "22:30", "date": "12-06"},
+              {"time": "10:00", "date": "13-06"},
+              {"time": "12:30", "date": "13-06"},
+              {"time": "15:00", "date": "13-06"},
+              {"time": "17:30", "date": "13-06"},
+              {"time": "20:00", "date": "13-06"},
+              {"time": "22:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            },
+            {
+              "id": "HALL-B",
+              "name": "Hall B",
+              "type": "IMAX",
+              "capacity": 80,
+              "showtimes": [            {"time": "13:30", "date": "09-06"},
+              {"time": "16:00", "date": "09-06"},
+              {"time": "18:30", "date": "09-06"},
+              {"time": "21:00", "date": "09-06"},
+              {"time": "11:00", "date": "10-06"},
+              {"time": "13:30", "date": "10-06"},
+              {"time": "16:00", "date": "10-06"},
+              {"time": "18:30", "date": "10-06"},
+              {"time": "21:00", "date": "10-06"},
+              {"time": "11:00", "date": "11-06"},
+              {"time": "13:30", "date": "11-06"},
+              {"time": "16:00", "date": "11-06"},
+              {"time": "18:30", "date": "11-06"},
+              {"time": "21:00", "date": "11-06"},
+              {"time": "11:00", "date": "12-06"},
+              {"time": "13:30", "date": "12-06"},
+              {"time": "16:00", "date": "12-06"},
+              {"time": "18:30", "date": "12-06"},
+              {"time": "21:00", "date": "12-06"},
+              {"time": "11:00", "date": "13-06"},
+              {"time": "13:30", "date": "13-06"},
+              {"time": "16:00", "date": "13-06"},
+              {"time": "18:30", "date": "13-06"},
+              {"time": "21:00", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["D", "E", "F"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 150000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 200000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "CGV-CM",
+          "name": "CGV Crescent Mall",
+          "address": "Lầu 5, Crescent Mall, 101 Tôn Dật Tiên, Phú Mỹ Hưng, Q.7, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "18:00", "date": "07-06"},
+              {"time": "20:30", "date": "07-06"},
+              {"time": "10:30", "date": "08-06"},
+              {"time": "13:00", "date": "08-06"},
+              {"time": "15:30", "date": "08-06"},
+              {"time": "18:00", "date": "08-06"},
+              {"time": "20:30", "date": "08-06"},
+              {"time": "10:30", "date": "09-06"},
+              {"time": "13:00", "date": "09-06"},
+              {"time": "15:30", "date": "09-06"},
+              {"time": "18:00", "date": "09-06"},
+              {"time": "20:30", "date": "09-06"},
+              {"time": "10:30", "date": "10-06"},
+              {"time": "13:00", "date": "10-06"},
+              {"time": "15:30", "date": "10-06"},
+              {"time": "18:00", "date": "10-06"},
+              {"time": "20:30", "date": "10-06"},
+              {"time": "10:30", "date": "11-06"},
+              {"time": "13:00", "date": "11-06"},
+              {"time": "15:30", "date": "11-06"},
+              {"time": "18:00", "date": "11-06"},
+              {"time": "20:30", "date": "11-06"},
+              {"time": "10:30", "date": "12-06"},
+              {"time": "13:00", "date": "12-06"},
+              {"time": "15:30", "date": "12-06"},
+              {"time": "18:00", "date": "12-06"},
+              {"time": "20:30", "date": "12-06"},
+              {"time": "10:30", "date": "13-06"},
+              {"time": "13:00", "date": "13-06"},
+              {"time": "15:30", "date": "13-06"},
+              {"time": "18:00", "date": "13-06"},
+              {"time": "20:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "68404ef474dd7d060c07f004",
+      "title": "Đèn Âm Hồn: Người con gái Nam Xương",
+      "image": "https://metiz.vn/media/poster_film/dah_teaserposter_1_.jpg",
+      "bannerImage": "https://cdn-images.vtv.vn/66349b6076cb4dee98746cf1/2024/12/12/dah-tcbc-1--51--23735163647706535488862.JPG",
+      "rating": 4.8,
+      "category": "Horror",
+      "duration": "1h 55m",
+      "releaseDate": "2024-06-22",
+      "description": "Câu chuyện kinh dị dựa trên truyền thuyết dân gian Việt Nam về người con gái Nam Xương.",
+      "isNowPlaying": false,
+      "isComingSoon": true,
+      "censorship": "C18 - PHIM CẤM KHÁN GIẢ DƯỚI 18 TUỔI",
+      "language": "Tiếng Việt",
+      "storyline": "Dựa trên câu chuyện dân gian nổi tiếng về Vũ Nương, người phụ nữ bị oan khuất và hóa thành đèn âm hồn. Bộ phim khai thác góc nhìn hiện đại về câu chuyện ma mị này.",
+      "director": {
+        "name": "Nguyễn Hữu Hoàng",
+        "image": "https://cand.com.vn/Files/Image/nguyenbinh/2017/11/28/thumb_660_94420a8b-7168-4e1f-b0f4-3ce93e890c1b.jpg",
+        "description": "Đạo diễn chuyên về thể loại kinh dị dân gian Việt Nam"
+      },
+      "actors": [
+        {
+          "name": "Ninh Dương Lan Ngọc",
+          "image": "https://image.gala.de/22419014/t/Ep/v2/w960/r0/-/teaser-ninh-duong-lan-ngoc.jpg",
+          "role": "Vũ Nương"
+        },
+        {
+          "name": "Lãnh Thanh",
+          "image": "https://static-images.vnncdn.net/files/publish/2023/5/20/329236018-1416573435545210-7060751915082955336-n-666.jpg",
+          "role": "Trương Sinh"
+        }
+      ],
+      "cinemas": [
+        {
+          "id": "CGV-LM81",
+          "name": "CGV Vincom Center Landmark 81",
+          "address": "Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "15:00", "date": "09-06"},
+              {"time": "17:30", "date": "09-06"},
+              {"time": "20:00", "date": "09-06"},
+              {"time": "22:30", "date": "09-06"},
+              {"time": "10:00", "date": "10-06"},
+              {"time": "12:30", "date": "10-06"},
+              {"time": "15:00", "date": "10-06"},
+              {"time": "17:30", "date": "10-06"},
+              {"time": "20:00", "date": "10-06"},
+              {"time": "22:30", "date": "10-06"},
+              {"time": "10:00", "date": "11-06"},
+              {"time": "12:30", "date": "11-06"},
+              {"time": "15:00", "date": "11-06"},
+              {"time": "17:30", "date": "11-06"},
+              {"time": "20:00", "date": "11-06"},
+              {"time": "22:30", "date": "11-06"},
+              {"time": "10:00", "date": "12-06"},
+              {"time": "12:30", "date": "12-06"},
+              {"time": "15:00", "date": "12-06"},
+              {"time": "17:30", "date": "12-06"},
+              {"time": "20:00", "date": "12-06"},
+              {"time": "22:30", "date": "12-06"},
+              {"time": "10:00", "date": "13-06"},
+              {"time": "12:30", "date": "13-06"},
+              {"time": "15:00", "date": "13-06"},
+              {"time": "17:30", "date": "13-06"},
+              {"time": "20:00", "date": "13-06"},
+              {"time": "22:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            },
+            {
+              "id": "HALL-B",
+              "name": "Hall B",
+              "type": "IMAX",
+              "capacity": 80,
+              "showtimes": [            {"time": "13:30", "date": "09-06"},
+              {"time": "16:00", "date": "09-06"},
+              {"time": "18:30", "date": "09-06"},
+              {"time": "21:00", "date": "09-06"},
+              {"time": "11:00", "date": "10-06"},
+              {"time": "13:30", "date": "10-06"},
+              {"time": "16:00", "date": "10-06"},
+              {"time": "18:30", "date": "10-06"},
+              {"time": "21:00", "date": "10-06"},
+              {"time": "11:00", "date": "11-06"},
+              {"time": "13:30", "date": "11-06"},
+              {"time": "16:00", "date": "11-06"},
+              {"time": "18:30", "date": "11-06"},
+              {"time": "21:00", "date": "11-06"},
+              {"time": "11:00", "date": "12-06"},
+              {"time": "13:30", "date": "12-06"},
+              {"time": "16:00", "date": "12-06"},
+              {"time": "18:30", "date": "12-06"},
+              {"time": "21:00", "date": "12-06"},
+              {"time": "11:00", "date": "13-06"},
+              {"time": "13:30", "date": "13-06"},
+              {"time": "16:00", "date": "13-06"},
+              {"time": "18:30", "date": "13-06"},
+              {"time": "21:00", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["D", "E", "F"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 150000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 200000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "CGV-CM",
+          "name": "CGV Crescent Mall",
+          "address": "Lầu 5, Crescent Mall, 101 Tôn Dật Tiên, Phú Mỹ Hưng, Q.7, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "18:00", "date": "07-06"},
+              {"time": "20:30", "date": "07-06"},
+              {"time": "10:30", "date": "08-06"},
+              {"time": "13:00", "date": "08-06"},
+              {"time": "15:30", "date": "08-06"},
+              {"time": "18:00", "date": "08-06"},
+              {"time": "20:30", "date": "08-06"},
+              {"time": "10:30", "date": "09-06"},
+              {"time": "13:00", "date": "09-06"},
+              {"time": "15:30", "date": "09-06"},
+              {"time": "18:00", "date": "09-06"},
+              {"time": "20:30", "date": "09-06"},
+              {"time": "10:30", "date": "10-06"},
+              {"time": "13:00", "date": "10-06"},
+              {"time": "15:30", "date": "10-06"},
+              {"time": "18:00", "date": "10-06"},
+              {"time": "20:30", "date": "10-06"},
+              {"time": "10:30", "date": "11-06"},
+              {"time": "13:00", "date": "11-06"},
+              {"time": "15:30", "date": "11-06"},
+              {"time": "18:00", "date": "11-06"},
+              {"time": "20:30", "date": "11-06"},
+              {"time": "10:30", "date": "12-06"},
+              {"time": "13:00", "date": "12-06"},
+              {"time": "15:30", "date": "12-06"},
+              {"time": "18:00", "date": "12-06"},
+              {"time": "20:30", "date": "12-06"},
+              {"time": "10:30", "date": "13-06"},
+              {"time": "13:00", "date": "13-06"},
+              {"time": "15:30", "date": "13-06"},
+              {"time": "18:00", "date": "13-06"},
+              {"time": "20:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Thunderbolts: Biệt đội sấm sét",
+      "image": "https://cinema.momocdn.net/img/84213865220325516-thunderbolts.png?size=M",
+      "bannerImage": "https://i.imgur.com/cafVL1k.jpg",
+      "rating": 4.7,
+      "category": "Action",
+      "duration": "1h 55m",
+      "releaseDate": "2024-05-29",
+      "description": "Một nhóm phản anh hùng được tập hợp để thực hiện những nhiệm vụ bí mật cho chính phủ.",
+      "isNowPlaying": false,
+      "isComingSoon": true,
+      "censorship": "C13 - PHIM CẤM KHÁN GIẢ DƯỚI 13 TUỔI",
+      "language": "Tiếng Anh - Phụ đề Tiếng Việt",
+      "storyline": "Một nhóm các nhân vật phức tạp với quá khứ đen tối được tập hợp lại để thực hiện những nhiệm vụ nguy hiểm cho chính phủ. Họ phải học cách tin tưởng lẫn nhau trong khi đối mặt với những thế lực đe dọa thế giới.",
+      "director": {
+        "name": "Jake Schreier",
+        "image": "https://m.media-amazon.com/images/M/MV5BMjA3MDYwNzc3OF5BMl5BanBnXkFtZTgwMzcwMDMzNjE@._V1_.jpg",
+        "description": "Đạo diễn mới của Marvel Studios"
+      },
+      "actors": [
+        {
+          "name": "Florence Pugh",
+          "image": "https://cdn.britannica.com/20/217320-050-181C95DC/English-actor-Florence-Pugh-2019.jpg",
+          "role": "Yelena Belova"
+        },
+        {
+          "name": "David Harbour",
+          "image": "https://m.media-amazon.com/images/M/MV5BZTc5ODUzMDAtZGFhZS00NmExLTlhYWYtZDY0NGI2MGMwYTIzXkEyXkFqcGdeQXVyODY0MzQyODc@._V1_FMjpg_UX1000_.jpg",
+          "role": "Alexei Shostakov"
+        },
+        {
+          "name": "Wyatt Russell",
+          "image": "https://deadline.com/wp-content/uploads/2018/07/wyatt-russell.jpg?w=1024",
+          "role": "John Walker"
+        },
+        {
+          "name": "Olga Kurylenko",
+          "image": "https://www.themoviedb.org/t/p/original/q0QXFRg5bSnaLjbvhamfclt0eId.jpg",
+          "role": "Antonia Dreykov"
+        },
+        {
+          "name": "Hannah John-Kamen",
+          "image": "https://wallpaperaccess.com/full/4275173.jpg",
+          "role": "Ava Starr"
+        },
+        {
+          "name": "Sebastian Stan",
+          "image": "https://wallpaperaccess.com/full/1261033.jpg",
+          "role": "Winter Soldier"
+        }
+      ],
+      "cinemas": [
+        {
+          "id": "CGV-LM81",
+          "name": "CGV Vincom Center Landmark 81",
+          "address": "Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "15:00", "date": "09-06"},
+              {"time": "17:30", "date": "09-06"},
+              {"time": "20:00", "date": "09-06"},
+              {"time": "22:30", "date": "09-06"},
+              {"time": "10:00", "date": "10-06"},
+              {"time": "12:30", "date": "10-06"},
+              {"time": "15:00", "date": "10-06"},
+              {"time": "17:30", "date": "10-06"},
+              {"time": "20:00", "date": "10-06"},
+              {"time": "22:30", "date": "10-06"},
+              {"time": "10:00", "date": "11-06"},
+              {"time": "12:30", "date": "11-06"},
+              {"time": "15:00", "date": "11-06"},
+              {"time": "17:30", "date": "11-06"},
+              {"time": "20:00", "date": "11-06"},
+              {"time": "22:30", "date": "11-06"},
+              {"time": "10:00", "date": "12-06"},
+              {"time": "12:30", "date": "12-06"},
+              {"time": "15:00", "date": "12-06"},
+              {"time": "17:30", "date": "12-06"},
+              {"time": "20:00", "date": "12-06"},
+              {"time": "22:30", "date": "12-06"},
+              {"time": "10:00", "date": "13-06"},
+              {"time": "12:30", "date": "13-06"},
+              {"time": "15:00", "date": "13-06"},
+              {"time": "17:30", "date": "13-06"},
+              {"time": "20:00", "date": "13-06"},
+              {"time": "22:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            },
+            {
+              "id": "HALL-B",
+              "name": "Hall B",
+              "type": "IMAX",
+              "capacity": 80,
+              "showtimes": [            {"time": "13:30", "date": "09-06"},
+              {"time": "16:00", "date": "09-06"},
+              {"time": "18:30", "date": "09-06"},
+              {"time": "21:00", "date": "09-06"},
+              {"time": "11:00", "date": "10-06"},
+              {"time": "13:30", "date": "10-06"},
+              {"time": "16:00", "date": "10-06"},
+              {"time": "18:30", "date": "10-06"},
+              {"time": "21:00", "date": "10-06"},
+              {"time": "11:00", "date": "11-06"},
+              {"time": "13:30", "date": "11-06"},
+              {"time": "16:00", "date": "11-06"},
+              {"time": "18:30", "date": "11-06"},
+              {"time": "21:00", "date": "11-06"},
+              {"time": "11:00", "date": "12-06"},
+              {"time": "13:30", "date": "12-06"},
+              {"time": "16:00", "date": "12-06"},
+              {"time": "18:30", "date": "12-06"},
+              {"time": "21:00", "date": "12-06"},
+              {"time": "11:00", "date": "13-06"},
+              {"time": "13:30", "date": "13-06"},
+              {"time": "16:00", "date": "13-06"},
+              {"time": "18:30", "date": "13-06"},
+              {"time": "21:00", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["D", "E", "F"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 150000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 200000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "CGV-CM",
+          "name": "CGV Crescent Mall",
+          "address": "Lầu 5, Crescent Mall, 101 Tôn Dật Tiên, Phú Mỹ Hưng, Q.7, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "18:00", "date": "07-06"},
+              {"time": "20:30", "date": "07-06"},
+              {"time": "10:30", "date": "08-06"},
+              {"time": "13:00", "date": "08-06"},
+              {"time": "15:30", "date": "08-06"},
+              {"time": "18:00", "date": "08-06"},
+              {"time": "20:30", "date": "08-06"},
+              {"time": "10:30", "date": "09-06"},
+              {"time": "13:00", "date": "09-06"},
+              {"time": "15:30", "date": "09-06"},
+              {"time": "18:00", "date": "09-06"},
+              {"time": "20:30", "date": "09-06"},
+              {"time": "10:30", "date": "10-06"},
+              {"time": "13:00", "date": "10-06"},
+              {"time": "15:30", "date": "10-06"},
+              {"time": "18:00", "date": "10-06"},
+              {"time": "20:30", "date": "10-06"},
+              {"time": "10:30", "date": "11-06"},
+              {"time": "13:00", "date": "11-06"},
+              {"time": "15:30", "date": "11-06"},
+              {"time": "18:00", "date": "11-06"},
+              {"time": "20:30", "date": "11-06"},
+              {"time": "10:30", "date": "12-06"},
+              {"time": "13:00", "date": "12-06"},
+              {"time": "15:30", "date": "12-06"},
+              {"time": "18:00", "date": "12-06"},
+              {"time": "20:30", "date": "12-06"},
+              {"time": "10:30", "date": "13-06"},
+              {"time": "13:00", "date": "13-06"},
+              {"time": "15:30", "date": "13-06"},
+              {"time": "18:00", "date": "13-06"},
+              {"time": "20:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+  
+    {
+      "id": 12,
+      "title": "Người Vợ Cuối Cùng",
+      "image": "https://images2.thanhnien.vn/528068263637045248/2023/11/1/nvccfirstlookdigital-1698822207701331021267.jpg",
+      "bannerImage": "https://nld.mediacdn.vn/291774122806476800/2023/7/18/nvcc08-s01-9671-1689658475328807161893.jpg",
+      "rating": 4.8,
+      "category": "Romance, Drama",
+      "duration": "2h 10m",
+      "releaseDate": "2024-07-26",
+      "description": "Câu chuyện đầy bi kịch về người vợ cuối cùng trong một gia đình quyền quý thời xưa.",
+      "isNowPlaying": false,
+      "isComingSoon": true,
+      "censorship": "C16 - PHIM CẤM KHÁN GIẢ DƯỚI 16 TUỔI",
+      "language": "Tiếng Việt",
+      "storyline": "Bộ phim kể về số phận của người phụ nữ là vợ cuối cùng trong một gia đình quyền quý. Cô phải đối mặt với những mưu mô, toan tính và đấu tranh để bảo vệ vị trí của mình.",
+      "director": {
+        "name": "Victor Vũ",
+        "image": "https://kenh14cdn.com/2016/1444098120-victor-vu-8-1452441631282.jpg",
+        "description": "Đạo diễn nổi tiếng với nhiều phim điện ảnh ăn khách"
+      },
+      "actors": [
+        {
+          "name": "Kaity Nguyễn",
+          "image": "http://nguoi-noi-tieng.com/photo/kaity-nguyen-6-11522.jpg",
+          "role": "Linh"
+        },
+        {
+          "name": "Thuận Nguyễn",
+          "image": "https://images2.thanhnien.vn/528068263637045248/2023/4/25/thuan-nguyen-9-16824142413911366517119.jpeg",
+          "role": "Nhân"
+        }
+      ],
+      "cinemas": [
+        {
+          "id": "CGV-LM81",
+          "name": "CGV Vincom Center Landmark 81",
+          "address": "Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "15:00", "date": "09-06"},
+              {"time": "17:30", "date": "09-06"},
+              {"time": "20:00", "date": "09-06"},
+              {"time": "22:30", "date": "09-06"},
+              {"time": "10:00", "date": "10-06"},
+              {"time": "12:30", "date": "10-06"},
+              {"time": "15:00", "date": "10-06"},
+              {"time": "17:30", "date": "10-06"},
+              {"time": "20:00", "date": "10-06"},
+              {"time": "22:30", "date": "10-06"},
+              {"time": "10:00", "date": "11-06"},
+              {"time": "12:30", "date": "11-06"},
+              {"time": "15:00", "date": "11-06"},
+              {"time": "17:30", "date": "11-06"},
+              {"time": "20:00", "date": "11-06"},
+              {"time": "22:30", "date": "11-06"},
+              {"time": "10:00", "date": "12-06"},
+              {"time": "12:30", "date": "12-06"},
+              {"time": "15:00", "date": "12-06"},
+              {"time": "17:30", "date": "12-06"},
+              {"time": "20:00", "date": "12-06"},
+              {"time": "22:30", "date": "12-06"},
+              {"time": "10:00", "date": "13-06"},
+              {"time": "12:30", "date": "13-06"},
+              {"time": "15:00", "date": "13-06"},
+              {"time": "17:30", "date": "13-06"},
+              {"time": "20:00", "date": "13-06"},
+              {"time": "22:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            },
+            {
+              "id": "HALL-B",
+              "name": "Hall B",
+              "type": "IMAX",
+              "capacity": 80,
+              "showtimes": [            {"time": "13:30", "date": "09-06"},
+              {"time": "16:00", "date": "09-06"},
+              {"time": "18:30", "date": "09-06"},
+              {"time": "21:00", "date": "09-06"},
+              {"time": "11:00", "date": "10-06"},
+              {"time": "13:30", "date": "10-06"},
+              {"time": "16:00", "date": "10-06"},
+              {"time": "18:30", "date": "10-06"},
+              {"time": "21:00", "date": "10-06"},
+              {"time": "11:00", "date": "11-06"},
+              {"time": "13:30", "date": "11-06"},
+              {"time": "16:00", "date": "11-06"},
+              {"time": "18:30", "date": "11-06"},
+              {"time": "21:00", "date": "11-06"},
+              {"time": "11:00", "date": "12-06"},
+              {"time": "13:30", "date": "12-06"},
+              {"time": "16:00", "date": "12-06"},
+              {"time": "18:30", "date": "12-06"},
+              {"time": "21:00", "date": "12-06"},
+              {"time": "11:00", "date": "13-06"},
+              {"time": "13:30", "date": "13-06"},
+              {"time": "16:00", "date": "13-06"},
+              {"time": "18:30", "date": "13-06"},
+              {"time": "21:00", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["D", "E", "F"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 150000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 200000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "CGV-CM",
+          "name": "CGV Crescent Mall",
+          "address": "Lầu 5, Crescent Mall, 101 Tôn Dật Tiên, Phú Mỹ Hưng, Q.7, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "18:00", "date": "07-06"},
+              {"time": "20:30", "date": "07-06"},
+              {"time": "10:30", "date": "08-06"},
+              {"time": "13:00", "date": "08-06"},
+              {"time": "15:30", "date": "08-06"},
+              {"time": "18:00", "date": "08-06"},
+              {"time": "20:30", "date": "08-06"},
+              {"time": "10:30", "date": "09-06"},
+              {"time": "13:00", "date": "09-06"},
+              {"time": "15:30", "date": "09-06"},
+              {"time": "18:00", "date": "09-06"},
+              {"time": "20:30", "date": "09-06"},
+              {"time": "10:30", "date": "10-06"},
+              {"time": "13:00", "date": "10-06"},
+              {"time": "15:30", "date": "10-06"},
+              {"time": "18:00", "date": "10-06"},
+              {"time": "20:30", "date": "10-06"},
+              {"time": "10:30", "date": "11-06"},
+              {"time": "13:00", "date": "11-06"},
+              {"time": "15:30", "date": "11-06"},
+              {"time": "18:00", "date": "11-06"},
+              {"time": "20:30", "date": "11-06"},
+              {"time": "10:30", "date": "12-06"},
+              {"time": "13:00", "date": "12-06"},
+              {"time": "15:30", "date": "12-06"},
+              {"time": "18:00", "date": "12-06"},
+              {"time": "20:30", "date": "12-06"},
+              {"time": "10:30", "date": "13-06"},
+              {"time": "13:00", "date": "13-06"},
+              {"time": "15:30", "date": "13-06"},
+              {"time": "18:00", "date": "13-06"},
+              {"time": "20:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  
+"bannerMovies": [
+  {
+      "id": "68404ef474dd7d060c07efee",
+      "title": "Godzilla x Kong",
+      "image": "https://posterspy.com/wp-content/uploads/2023/12/GXK.jpg",
+      "bannerImage": "https://tintuc-divineshop.cdn.vccloud.vn/wp-content/uploads/2024/03/godzilla-x-kong-de-che-moi-8-dieu-thu-vi-ban-can-biet-ve-phim_66022496cc553.jpeg",
+      "rating": 4.7,
+      "category": "Action",
+      "duration": "1h 55m",
+      "releaseDate": "2024-03-29",
+      "description": "Trận chiến hoành tráng giữa hai quái vật huyền thoại Godzilla và Kong khi họ đối đầu với một mối đe dọa mới từ sâu trong Trái Đất.",
+      "isNowPlaying": true,
+      "isComingSoon": false,
+      "censorship": "C13 - PHIM CẤM KHÁN GIẢ DƯỚI 13 TUỔI",
+      "language": "Tiếng Anh",
+      "storyline": "Godzilla và Kong buộc phải hợp lực đối mặt với một mối nguy hiểm ẩn sâu trong Trái Đất, đe dọa sự tồn vong của nhân loại. Một cuộc hành trình mới được mở ra, hé lộ nguồn gốc và sức mạnh thực sự của cả hai sinh vật khổng lồ.",
+      "director": {
+        "name": "Adam Wingard",
+        "image": "https://alchetron.com/cdn/adam-wingard-1939c337-e910-4d02-b2c1-c300de28363-resize-750.jpg",
+        "description": "Đạo diễn người Mỹ nổi tiếng với phong cách hành động kịch tính và từng chỉ đạo Godzilla vs. Kong (2021)."
+      },
+      "actors": [
+        {
+          "name": "Rebecca Hall",
+          "image": "http://celebmafia.com/wp-content/uploads/2016/05/rebecca-hall-the-bfg-photocall-at-cannes-film-festival-5-14-2016-1.jpg",
+          "role": "Ilene Andrews"
+        },
+        {
+          "name": "Brian Tyree Henry",
+          "image": "https://m.media-amazon.com/images/M/MV5BODhjMzM0YjktMzc4Ni00MWI0LWExZjgtMmYyMjEzOTE1MWU4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "role": "Bernie Hayes"
+        },
+        {
+          "name": "Dan Stevens",
+          "image": "https://m.media-amazon.com/images/M/MV5BMTUwNzUzMzI3N15BMl5BanBnXkFtZTgwODU4MjkxMDE@._V1_FMjpg_UX1000_.jpg",
+          "role": "Trapper"
+        }
+      ],
+      "cinemas": [
+        {
+          "id": "CGV-LM81",
+          "name": "CGV Vincom Center Landmark 81",
+          "address": "Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "15:00", "date": "09-06"},
+              {"time": "17:30", "date": "09-06"},
+              {"time": "20:00", "date": "09-06"},
+              {"time": "22:30", "date": "09-06"},
+              {"time": "10:00", "date": "10-06"},
+              {"time": "12:30", "date": "10-06"},
+              {"time": "15:00", "date": "10-06"},
+              {"time": "17:30", "date": "10-06"},
+              {"time": "20:00", "date": "10-06"},
+              {"time": "22:30", "date": "10-06"},
+              {"time": "10:00", "date": "11-06"},
+              {"time": "12:30", "date": "11-06"},
+              {"time": "15:00", "date": "11-06"},
+              {"time": "17:30", "date": "11-06"},
+              {"time": "20:00", "date": "11-06"},
+              {"time": "22:30", "date": "11-06"},
+              {"time": "10:00", "date": "12-06"},
+              {"time": "12:30", "date": "12-06"},
+              {"time": "15:00", "date": "12-06"},
+              {"time": "17:30", "date": "12-06"},
+              {"time": "20:00", "date": "12-06"},
+              {"time": "22:30", "date": "12-06"},
+              {"time": "10:00", "date": "13-06"},
+              {"time": "12:30", "date": "13-06"},
+              {"time": "15:00", "date": "13-06"},
+              {"time": "17:30", "date": "13-06"},
+              {"time": "20:00", "date": "13-06"},
+              {"time": "22:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            },
+            {
+              "id": "HALL-B",
+              "name": "Hall B",
+              "type": "IMAX",
+              "capacity": 80,
+              "showtimes": [            {"time": "13:30", "date": "09-06"},
+              {"time": "16:00", "date": "09-06"},
+              {"time": "18:30", "date": "09-06"},
+              {"time": "21:00", "date": "09-06"},
+              {"time": "11:00", "date": "10-06"},
+              {"time": "13:30", "date": "10-06"},
+              {"time": "16:00", "date": "10-06"},
+              {"time": "18:30", "date": "10-06"},
+              {"time": "21:00", "date": "10-06"},
+              {"time": "11:00", "date": "11-06"},
+              {"time": "13:30", "date": "11-06"},
+              {"time": "16:00", "date": "11-06"},
+              {"time": "18:30", "date": "11-06"},
+              {"time": "21:00", "date": "11-06"},
+              {"time": "11:00", "date": "12-06"},
+              {"time": "13:30", "date": "12-06"},
+              {"time": "16:00", "date": "12-06"},
+              {"time": "18:30", "date": "12-06"},
+              {"time": "21:00", "date": "12-06"},
+              {"time": "11:00", "date": "13-06"},
+              {"time": "13:30", "date": "13-06"},
+              {"time": "16:00", "date": "13-06"},
+              {"time": "18:30", "date": "13-06"},
+              {"time": "21:00", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["D", "E", "F"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 150000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 200000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "CGV-CM",
+          "name": "CGV Crescent Mall",
+          "address": "Lầu 5, Crescent Mall, 101 Tôn Dật Tiên, Phú Mỹ Hưng, Q.7, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "18:00", "date": "07-06"},
+              {"time": "20:30", "date": "07-06"},
+              {"time": "10:30", "date": "08-06"},
+              {"time": "13:00", "date": "08-06"},
+              {"time": "15:30", "date": "08-06"},
+              {"time": "18:00", "date": "08-06"},
+              {"time": "20:30", "date": "08-06"},
+              {"time": "10:30", "date": "09-06"},
+              {"time": "13:00", "date": "09-06"},
+              {"time": "15:30", "date": "09-06"},
+              {"time": "18:00", "date": "09-06"},
+              {"time": "20:30", "date": "09-06"},
+              {"time": "10:30", "date": "10-06"},
+              {"time": "13:00", "date": "10-06"},
+              {"time": "15:30", "date": "10-06"},
+              {"time": "18:00", "date": "10-06"},
+              {"time": "20:30", "date": "10-06"},
+              {"time": "10:30", "date": "11-06"},
+              {"time": "13:00", "date": "11-06"},
+              {"time": "15:30", "date": "11-06"},
+              {"time": "18:00", "date": "11-06"},
+              {"time": "20:30", "date": "11-06"},
+              {"time": "10:30", "date": "12-06"},
+              {"time": "13:00", "date": "12-06"},
+              {"time": "15:30", "date": "12-06"},
+              {"time": "18:00", "date": "12-06"},
+              {"time": "20:30", "date": "12-06"},
+              {"time": "10:30", "date": "13-06"},
+              {"time": "13:00", "date": "13-06"},
+              {"time": "15:30", "date": "13-06"},
+              {"time": "18:00", "date": "13-06"},
+              {"time": "20:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "68404ef474dd7d060c07efdb",
+      "title": "Mai",
+      "image": "https://www.galaxycine.vn/media/2024/2/2/mai-2_1706838906431.jpg",
+      "bannerImage": "https://cafefcdn.com/203337114487263232/2024/2/22/image3-1707209226-755-width2048height1365-1707617309-845-width2048height1365-17085909989012095964875-1708593534125-17085935342711900793517.jpg",
+      "rating": 4.9,
+      "category": "Tình Cảm",
+      "duration": "2h 11m",
+      "releaseDate": "2024-02-10",
+      "description": "Câu chuyện xoay quanh cuộc đời của Mai - một người phụ nữ đẹp và tài năng nhưng luôn phải che giấu những tổn thương trong quá khứ.",
+      "isNowPlaying": true,
+      "isComingSoon": false,
+      "censorship": "T16 - PHIM CẤM KHÁN GIẢ DƯỚI 16 TUỔI",
+      "language": "Tiếng Việt",
+      "storyline": "Mai là câu chuyện về một người phụ nữ đau khổ nhưng kiên cường, một tình yêu đẹp nhưng éo le, và những góc khuất chưa từng được kể về mảnh đất Huế mộng mơ.",
+      "director": {
+        "name": "Trấn Thành",
+        "image": "https://images2.thanhnien.vn/528068263637045248/2023/8/17/edit-3673866748894753192094058610540232771086102n-16922488357671188500151.png",
+        "description": "Nam diễn viên, MC đa tài với nhiều tác phẩm điện ảnh thành công như Bố Già, Nhà Bà Nữ"
+      },
+      "actors": [
+        {
+          "name": "Phương Anh Đào",
+          "image": "https://image.thanhnien.vn/w2048/Uploaded/2024/xdrkxrvekx/2024_01_09/phuong-anh-dao-3-5203.jpeg",
+          "role": "Mai"
+        },
+        {
+          "name": "Tuấn Trần",
+          "image": "https://nguoinoitieng.tv/images/nnt/96/1/bb1v.jpg",
+          "role": "Dương"
+        },
+        {
+          "name": "Uyển Ân",
+          "image": "https://image.thanhnien.vn/w2048/Uploaded/2024/xdrkxrvekx/2024_01_10/mai-3-2-8787.jpeg",
+          "role": "Mai (thời trẻ)"
+        }
+      ],
+      "cinemas": [
+        {
+          "id": "CGV-LM81",
+          "name": "CGV Vincom Center Landmark 81",
+          "address": "Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "15:00", "date": "09-06"},
+              {"time": "17:30", "date": "09-06"},
+              {"time": "20:00", "date": "09-06"},
+              {"time": "22:30", "date": "09-06"},
+              {"time": "10:00", "date": "10-06"},
+              {"time": "12:30", "date": "10-06"},
+              {"time": "15:00", "date": "10-06"},
+              {"time": "17:30", "date": "10-06"},
+              {"time": "20:00", "date": "10-06"},
+              {"time": "22:30", "date": "10-06"},
+              {"time": "10:00", "date": "11-06"},
+              {"time": "12:30", "date": "11-06"},
+              {"time": "15:00", "date": "11-06"},
+              {"time": "17:30", "date": "11-06"},
+              {"time": "20:00", "date": "11-06"},
+              {"time": "22:30", "date": "11-06"},
+              {"time": "10:00", "date": "12-06"},
+              {"time": "12:30", "date": "12-06"},
+              {"time": "15:00", "date": "12-06"},
+              {"time": "17:30", "date": "12-06"},
+              {"time": "20:00", "date": "12-06"},
+              {"time": "22:30", "date": "12-06"},
+              {"time": "10:00", "date": "13-06"},
+              {"time": "12:30", "date": "13-06"},
+              {"time": "15:00", "date": "13-06"},
+              {"time": "17:30", "date": "13-06"},
+              {"time": "20:00", "date": "13-06"},
+              {"time": "22:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            },
+            {
+              "id": "HALL-B",
+              "name": "Hall B",
+              "type": "IMAX",
+              "capacity": 80,
+              "showtimes": [            {"time": "13:30", "date": "09-06"},
+              {"time": "16:00", "date": "09-06"},
+              {"time": "18:30", "date": "09-06"},
+              {"time": "21:00", "date": "09-06"},
+              {"time": "11:00", "date": "10-06"},
+              {"time": "13:30", "date": "10-06"},
+              {"time": "16:00", "date": "10-06"},
+              {"time": "18:30", "date": "10-06"},
+              {"time": "21:00", "date": "10-06"},
+              {"time": "11:00", "date": "11-06"},
+              {"time": "13:30", "date": "11-06"},
+              {"time": "16:00", "date": "11-06"},
+              {"time": "18:30", "date": "11-06"},
+              {"time": "21:00", "date": "11-06"},
+              {"time": "11:00", "date": "12-06"},
+              {"time": "13:30", "date": "12-06"},
+              {"time": "16:00", "date": "12-06"},
+              {"time": "18:30", "date": "12-06"},
+              {"time": "21:00", "date": "12-06"},
+              {"time": "11:00", "date": "13-06"},
+              {"time": "13:30", "date": "13-06"},
+              {"time": "16:00", "date": "13-06"},
+              {"time": "18:30", "date": "13-06"},
+              {"time": "21:00", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["D", "E", "F"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 150000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 200000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "CGV-CM",
+          "name": "CGV Crescent Mall",
+          "address": "Lầu 5, Crescent Mall, 101 Tôn Dật Tiên, Phú Mỹ Hưng, Q.7, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "18:00", "date": "07-06"},
+              {"time": "20:30", "date": "07-06"},
+              {"time": "10:30", "date": "08-06"},
+              {"time": "13:00", "date": "08-06"},
+              {"time": "15:30", "date": "08-06"},
+              {"time": "18:00", "date": "08-06"},
+              {"time": "20:30", "date": "08-06"},
+              {"time": "10:30", "date": "09-06"},
+              {"time": "13:00", "date": "09-06"},
+              {"time": "15:30", "date": "09-06"},
+              {"time": "18:00", "date": "09-06"},
+              {"time": "20:30", "date": "09-06"},
+              {"time": "10:30", "date": "10-06"},
+              {"time": "13:00", "date": "10-06"},
+              {"time": "15:30", "date": "10-06"},
+              {"time": "18:00", "date": "10-06"},
+              {"time": "20:30", "date": "10-06"},
+              {"time": "10:30", "date": "11-06"},
+              {"time": "13:00", "date": "11-06"},
+              {"time": "15:30", "date": "11-06"},
+              {"time": "18:00", "date": "11-06"},
+              {"time": "20:30", "date": "11-06"},
+              {"time": "10:30", "date": "12-06"},
+              {"time": "13:00", "date": "12-06"},
+              {"time": "15:30", "date": "12-06"},
+              {"time": "18:00", "date": "12-06"},
+              {"time": "20:30", "date": "12-06"},
+              {"time": "10:30", "date": "13-06"},
+              {"time": "13:00", "date": "13-06"},
+              {"time": "15:30", "date": "13-06"},
+              {"time": "18:00", "date": "13-06"},
+              {"time": "20:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "68404ef474dd7d060c07efea",
+      "title": "The Silent Sea",
+      "image": "https://flxt.tmsimg.com/assets/p21059493_b_v9_aa.jpg",
+      "bannerImage": "https://www.nme.com/wp-content/uploads/2021/02/silent-sea-netflix@2000x1270.jpg",
+      "rating": 4.9,
+      "category": "Sci-Fi",
+      "duration": "2h 11m",
+      "releaseDate": "2024-22-24",
+      "description": "Một nhiệm vụ đặc biệt được giao cho đội ngũ phi hành gia khám phá bí mật tại một trạm nghiên cứu bị bỏ hoang trên Mặt Trăng.",
+      "isNowPlaying": true,
+      "isComingSoon": false,
+      "censorship": "C16 - PHIM CẤM KHÁN GIẢ DƯỚI 16 TUỔI",
+      "language": "Tiếng Hàn",
+      "storyline": "Trong tương lai khi Trái Đất khan hiếm tài nguyên, một nhóm các nhà khoa học và binh lính được cử lên Mặt Trăng để phục hồi một mẫu nghiên cứu có thể thay đổi vận mệnh nhân loại.",
+      "director": {
+        "name": "Choi Hang-yong",
+        "image": "https://magazinema.es/wp-content/uploads/2021/12/The-Silent-Sea-MAgaZinema-2.jpg",
+        "description": "Đạo diễn Hàn Quốc nổi bật với các bộ phim khoa học viễn tưởng và phong cách dựng phim đầy kịch tính."
+      },
+      "actors": [
+        {
+          "name": "Bae Doona",
+          "image": "https://www.hancinema.net/photos/fullsizephoto896550.jpg",
+          "role": "Song Ji-an"
+        },
+        {
+          "name": "Gong Yoo",
+          "image": "https://3.bp.blogspot.com/-roQcrKJ2OXk/W0VWw4iD_FI/AAAAAAAAdEY/18DbUmoQYsAktjkn_L2s4QsNoMRFItvegCLcBGAs/s1600/020.png",
+          "role": "Han Yoon-jae"
+        },
+        {
+          "name": "Lee Joon",
+          "image": "https://i.mydramalist.com/xLdjw_5_c.jpg",
+          "role": "Ryu Tae-seok"
+        }
+      ],
+      "cinemas": [
+        {
+          "id": "CGV-LM81",
+          "name": "CGV Vincom Center Landmark 81",
+          "address": "Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "15:00", "date": "09-06"},
+              {"time": "17:30", "date": "09-06"},
+              {"time": "20:00", "date": "09-06"},
+              {"time": "22:30", "date": "09-06"},
+              {"time": "10:00", "date": "10-06"},
+              {"time": "12:30", "date": "10-06"},
+              {"time": "15:00", "date": "10-06"},
+              {"time": "17:30", "date": "10-06"},
+              {"time": "20:00", "date": "10-06"},
+              {"time": "22:30", "date": "10-06"},
+              {"time": "10:00", "date": "11-06"},
+              {"time": "12:30", "date": "11-06"},
+              {"time": "15:00", "date": "11-06"},
+              {"time": "17:30", "date": "11-06"},
+              {"time": "20:00", "date": "11-06"},
+              {"time": "22:30", "date": "11-06"},
+              {"time": "10:00", "date": "12-06"},
+              {"time": "12:30", "date": "12-06"},
+              {"time": "15:00", "date": "12-06"},
+              {"time": "17:30", "date": "12-06"},
+              {"time": "20:00", "date": "12-06"},
+              {"time": "22:30", "date": "12-06"},
+              {"time": "10:00", "date": "13-06"},
+              {"time": "12:30", "date": "13-06"},
+              {"time": "15:00", "date": "13-06"},
+              {"time": "17:30", "date": "13-06"},
+              {"time": "20:00", "date": "13-06"},
+              {"time": "22:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            },
+            {
+              "id": "HALL-B",
+              "name": "Hall B",
+              "type": "IMAX",
+              "capacity": 80,
+              "showtimes": [            {"time": "13:30", "date": "09-06"},
+              {"time": "16:00", "date": "09-06"},
+              {"time": "18:30", "date": "09-06"},
+              {"time": "21:00", "date": "09-06"},
+              {"time": "11:00", "date": "10-06"},
+              {"time": "13:30", "date": "10-06"},
+              {"time": "16:00", "date": "10-06"},
+              {"time": "18:30", "date": "10-06"},
+              {"time": "21:00", "date": "10-06"},
+              {"time": "11:00", "date": "11-06"},
+              {"time": "13:30", "date": "11-06"},
+              {"time": "16:00", "date": "11-06"},
+              {"time": "18:30", "date": "11-06"},
+              {"time": "21:00", "date": "11-06"},
+              {"time": "11:00", "date": "12-06"},
+              {"time": "13:30", "date": "12-06"},
+              {"time": "16:00", "date": "12-06"},
+              {"time": "18:30", "date": "12-06"},
+              {"time": "21:00", "date": "12-06"},
+              {"time": "11:00", "date": "13-06"},
+              {"time": "13:30", "date": "13-06"},
+              {"time": "16:00", "date": "13-06"},
+              {"time": "18:30", "date": "13-06"},
+              {"time": "21:00", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["D", "E", "F"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 150000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 200000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "CGV-CM",
+          "name": "CGV Crescent Mall",
+          "address": "Lầu 5, Crescent Mall, 101 Tôn Dật Tiên, Phú Mỹ Hưng, Q.7, TP.HCM",
+          "halls": [
+            {
+              "id": "HALL-A",
+              "name": "Hall A",
+              "type": "2D",
+              "capacity": 100,
+              "showtimes": [            {"time": "18:00", "date": "07-06"},
+              {"time": "20:30", "date": "07-06"},
+              {"time": "10:30", "date": "08-06"},
+              {"time": "13:00", "date": "08-06"},
+              {"time": "15:30", "date": "08-06"},
+              {"time": "18:00", "date": "08-06"},
+              {"time": "20:30", "date": "08-06"},
+              {"time": "10:30", "date": "09-06"},
+              {"time": "13:00", "date": "09-06"},
+              {"time": "15:30", "date": "09-06"},
+              {"time": "18:00", "date": "09-06"},
+              {"time": "20:30", "date": "09-06"},
+              {"time": "10:30", "date": "10-06"},
+              {"time": "13:00", "date": "10-06"},
+              {"time": "15:30", "date": "10-06"},
+              {"time": "18:00", "date": "10-06"},
+              {"time": "20:30", "date": "10-06"},
+              {"time": "10:30", "date": "11-06"},
+              {"time": "13:00", "date": "11-06"},
+              {"time": "15:30", "date": "11-06"},
+              {"time": "18:00", "date": "11-06"},
+              {"time": "20:30", "date": "11-06"},
+              {"time": "10:30", "date": "12-06"},
+              {"time": "13:00", "date": "12-06"},
+              {"time": "15:30", "date": "12-06"},
+              {"time": "18:00", "date": "12-06"},
+              {"time": "20:30", "date": "12-06"},
+              {"time": "10:30", "date": "13-06"},
+              {"time": "13:00", "date": "13-06"},
+              {"time": "15:30", "date": "13-06"},
+              {"time": "18:00", "date": "13-06"},
+              {"time": "20:30", "date": "13-06"}],
+              "seatMap": {
+                "rows": ["A", "B", "C", "D", "E", "F", "G"],
+                "columns": 10,
+                "vipRows": ["E", "F", "G"],
+                "seatTypes": {
+                  "standard": {
+                    "price": 120000,
+                    "color": "#6B7280"
+                  },
+                  "vip": {
+                    "price": 160000,
+                    "color": "#EAB308"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "discounts": [
+    {
+      "id": 1,
+      "title": "Movie Night Bundle",
+      "image": "https://fox5theatre.com/wp-content/uploads/2020/03/PopcornCombo-450x450.jpg",
+      "description": "1 Large Popcorns + 2 Drinks",
+      "discount": "20% OFF",
+      "originalPrice": 25.99,
+      "discountedPrice": 20.79
+    },
+    {
+      "id": 2,
+      "title": "Family Pack",
+      "image": "https://img.grouponcdn.com/deal/8aLwvDVxnqzsdak2hUmX/Lq-960x576/v1/c870x524.jpg",
+      "description": "1 Medium Popcorns + 1 Drinks + 1 Nachos",
+      "discount": "25% OFF",
+      "originalPrice": 45.99,
+      "discountedPrice": 34.49
+    },
+
+    {
+      "id": 3,
+      "title": "Solo Special",
+      "image": "https://cinplx-digital-cdn.app.vista.co/media/entity/get/ItemGraphic/16382",
+      "description": "1 Large Popcorn + 1 Drink + 1 Candy",
+      "discount": "15% OFF",
+      "originalPrice": 15.99,
+      "discountedPrice": 13.59
+    },
+    {
+      "id": 4,
+      "title": "Premium Bundle",
+      "image": "https://s3.amazonaws.com/tuna.maya/slider/maya_15883559315eac635bd927f.jpg",
+      "description": "1 Large Popcorns + 4 Drinks + 4 Hot Dogs",
+      "discount": "30% OFF",
+      "originalPrice": 55.99,
+      "discountedPrice": 39.19
+    }, 
+    {
+      "id": 5,
+      "title": "Kids Special",
+      "image": "https://www.magiquestpf.com/wp-content/uploads/popcorn-coke.png",
+      "description": "1 Small Popcorns + 1 Drinks",
+      "discount": "20% OFF",
+      "originalPrice": 22.99,
+      "discountedPrice": 17.39
+    }
+  ],
+  "seatPrices": 
+  {
+    "standard": 80000,
+    "premium": 120000
+  },
+  "seatStatus": {
+    "available": {
+      "color": "#22C55E",
+      "label": "Ghế trống"
+    },
+    "occupied": {
+      "color": "#EF4444",
+      "label": "Đã đặt"
+    },
+    "selected": {
+      "color": "#3B82F6",
+      "label": "Đang chọn"
+    },
+    "disabled": {
+      "color": "#9CA3AF",
+      "label": "Không khả dụng"
+    }
+  },
+  "bookingConfig": {
+    "maxSeatsPerBooking": 8,
+    "timeoutMinutes": 5,
+    "cancellationPolicy": {
+      "allowedBefore": 24
+    }
+  }
+}
