@@ -78,12 +78,21 @@ const Payment = () => {
         purchaseDate: new Date().toISOString()
       };
 
+      // Get existing tickets from localStorage
       const existingTickets = JSON.parse(localStorage.getItem('tickets') || '[]');
-      localStorage.setItem('tickets', JSON.stringify([...existingTickets, ticketData]));
+      
+      // Add new ticket to the beginning of the array
+      const updatedTickets = [ticketData, ...existingTickets];
+      
+      // Save to localStorage
+      localStorage.setItem('tickets', JSON.stringify(updatedTickets));
 
-      // Navigate to ticket detail page
+      // Navigate to ticket detail page with success message
       navigate(`/tickets/${ticketData.id}`, {
-        state: { ticketData }
+        state: { 
+          message: 'Payment successful! Your ticket has been booked.',
+          ticketData 
+        }
       });
     } catch (error) {
       setError('Payment processing failed. Please try again.');
