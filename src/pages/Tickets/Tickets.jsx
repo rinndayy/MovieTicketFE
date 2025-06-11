@@ -126,7 +126,7 @@ const Tickets = () => {
     <div className="min-h-screen bg-gray-900 py-12">
       <div className="container mx-auto px-4">
         {/* Back Button on its own row */}
-        <div className="flex items-center mb-66">
+        <div className="flex items-center mb-6">
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

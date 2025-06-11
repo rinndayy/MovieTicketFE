@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiArrowLeft, FiCreditCard, FiSmartphone, FiDollarSign } from 'react-icons/fi';
+import { useAuth } from '../../context/AuthContext';
+import axios from 'axios';
 
 const paymentMethods = [
   {
@@ -27,6 +29,7 @@ const paymentMethods = [
 const Payment = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const { user } = useAuth();
   const [selectedMethod, setSelectedMethod] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState(null);
@@ -55,6 +58,11 @@ const Payment = () => {
       return;
     }
 
+    if (!user) {
+      setError('Please login to continue');
+      return;
+    }
+
     setIsProcessing(true);
     setError(null);
 
@@ -62,9 +70,10 @@ const Payment = () => {
       // Simulate payment processing
       await new Promise(resolve => setTimeout(resolve, 1500));
 
-      // Store ticket data in localStorage
+      // Create ticket data
       const ticketData = {
         id: Date.now().toString(),
+        userId: user.id,
         movieId: bookingData.movieId,
         movieTitle: bookingData.movieTitle,
         cinema: bookingData.cinema,
@@ -77,6 +86,14 @@ const Payment = () => {
         status: 'paid',
         purchaseDate: new Date().toISOString()
       };
+
+      // Save to MongoDB
+      try {
+        await axios.post('http://localhost:5000/api/tickets', ticketData);
+      } catch (mongoError) {
+        console.error('Failed to save ticket to MongoDB:', mongoError);
+        // Continue with localStorage save even if MongoDB fails
+      }
 
       // Get existing tickets from localStorage
       const existingTickets = JSON.parse(localStorage.getItem('tickets') || '[]');

@@ -7,7 +7,7 @@ import {
 import movieData from '../data/data.json';
 import { useAuth } from '../../context/AuthContext';
 
-const TicketNotification = ({ ticket, onClick, onDelete }) => (
+const TicketNotification = ({ ticket, movie, onClick, onDelete }) => (
   <motion.div
     whileHover={{ backgroundColor: 'rgba(0,0,0,0.05)' }}
     className="w-full p-4 text-left transition-colors border-b border-gray-200 dark:border-gray-700 relative group"
@@ -15,7 +15,7 @@ const TicketNotification = ({ ticket, onClick, onDelete }) => (
     <div className="flex space-x-4" onClick={onClick}>
       <div className="w-20 h-24 rounded-lg overflow-hidden flex-shrink-0">
         <img
-          src={ticket.movieBanner || '/fallback-poster.jpg'}
+          src={movie?.image || '/fallback-poster.jpg'}
           alt={ticket.movieTitle}
           className="w-full h-full object-cover"
           onError={(e) => {
@@ -67,7 +67,7 @@ const Header = () => {
   const [showProfile, setShowProfile] = useState(false);
   const navigate = useNavigate();
 
-  // Load tickets from localStorage
+  // Load tickets from localStorage and enrich with movie data
   useEffect(() => {
     const loadTickets = () => {
       const storedTickets = JSON.parse(localStorage.getItem('tickets') || '[]');
@@ -77,6 +77,11 @@ const Header = () => {
     window.addEventListener('storage', loadTickets);
     return () => window.removeEventListener('storage', loadTickets);
   }, []);
+
+  // Get movie data for a ticket
+  const getMovieData = (movieId) => {
+    return movieData.movies.find(movie => movie.id === movieId) || null;
+  };
 
   // Debounced search with error handling
   useEffect(() => {
@@ -353,6 +358,7 @@ const Header = () => {
                             <TicketNotification
                               key={ticket.id}
                               ticket={ticket}
+                              movie={getMovieData(ticket.movieId)}
                               onClick={() => handleTicketClick(ticket)}
                               onDelete={handleDeleteTicket}
                             />
