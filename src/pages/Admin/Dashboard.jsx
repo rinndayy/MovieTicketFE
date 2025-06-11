@@ -76,7 +76,7 @@ const Dashboard = () => {
       setBookings(
         Array.isArray(bookingsData)
           ? bookingsData.filter(
-              booking => booking && booking.movie && booking.movie.title && booking.user && booking.user.fullName
+              booking => booking && booking.movie && booking.movie.title && booking.userId && booking.userId.fullName
             )
           : []
       );
@@ -1026,14 +1026,16 @@ const Dashboard = () => {
                       {bookings
                         .filter(booking =>
                           (booking?.movie?.title?.toLowerCase()?.includes(searchTerm.toLowerCase()) || false) ||
-                          (booking?.user?.fullName?.toLowerCase()?.includes(searchTerm.toLowerCase()) || false)
+                          (booking?.userId?.fullName?.toLowerCase()?.includes(searchTerm.toLowerCase()) || false)
                         )
                         .map(booking => (
                           <tr key={booking._id} className="border-b dark:border-gray-700">
                             <td className="py-4 text-gray-900 dark:text-white">{booking.movie.title}</td>
-                            <td className="py-4 text-gray-600 dark:text-gray-400">{booking.user.fullName}</td>
+                            <td className="py-4 text-gray-600 dark:text-gray-400">{booking.userId.fullName}</td>
                             <td className="py-4 text-gray-600 dark:text-gray-400">
-                              {new Date(booking.showTime.date).toLocaleDateString()} {booking.showTime.time}
+                              {booking.showTime && booking.showTime.date && booking.showTime.time ? (
+                                `${new Date(booking.showTime.date).toLocaleDateString()} ${booking.showTime.time}`
+                              ) : ''}
                             </td>
                             <td className="py-4 text-gray-600 dark:text-gray-400">
                               {booking.seats.map(seat => `${seat.row}${seat.number}`).join(', ')}
