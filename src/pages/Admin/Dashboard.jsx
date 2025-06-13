@@ -16,6 +16,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import * as movieService from '../../services/movieService';
 import { toast } from 'react-toastify';
 import LoadingAnimation from '../../components/LoadingAnimation';
+import movieData from '../data/data.json';
 
 const Dashboard = () => {
   const { user, logout } = useAuth();
@@ -32,31 +33,21 @@ const Dashboard = () => {
     title: '',
     description: '',
     duration: '',
-    category: '',
+    genre: [],
     releaseDate: '',
-    image: '',
-    bannerImage: '',
-    rating: 0,
-    isNowPlaying: false,
-    isComingSoon: false,
-    censorship: '',
-    language: '',
-    storyline: '',
+    poster: '',
+    banner: '',
     trailer: '',
-    director: {
-      name: '',
-      image: '',
-      description: ''
-    },
-    actors: []
+    storyline: '',
+    status: 'coming-soon'
   });
   const navigate = useNavigate();
 
   useEffect(() => {
     const checkAdminAuth = async () => {
-      try {
+    try {
         const storedUser = JSON.parse(localStorage.getItem('user'));
-        const token = localStorage.getItem('token');
+      const token = localStorage.getItem('token');
 
         if (!token || !storedUser) {
           console.error('No token or user found');
@@ -87,106 +78,81 @@ const Dashboard = () => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const moviesData = await movieService.getAllMovies();
-      // Chuyển đổi duration từ số phút thành định dạng "2h 30m"
-      const formattedMovies = moviesData.map(movie => ({
-        ...movie,
-        duration: convertMinutesToDuration(movie.duration)
-      }));
-      setMovies(formattedMovies);
+      // Lấy phim từ database
+      const dbMovies = await movieService.getAllMovies();
+      
+      // Lấy phim tĩnh từ data.json
+      const staticMovies = movieData.movies;
+      
+      // Kết hợp phim từ database và data.json
+      // Nếu phim có cùng title, ưu tiên dùng phim từ database nhưng giữ poster từ data.json nếu cần
+      const combinedMovies = [
+        ...dbMovies.map(movie => ({
+          ...movie,
+          poster: getMoviePoster(movie)
+        })),
+        ...staticMovies.filter(staticMovie => 
+          !dbMovies.some(dbMovie => dbMovie.title === staticMovie.title)
+        )
+      ];
+
+      setMovies(combinedMovies);
     } catch (error) {
-      console.error('Error fetching data:', error);
-      if (error.message?.includes('Not authorized')) {
-        toast.error('Session expired. Please login again.');
-        logout();
-      } else {
-        toast.error(error.message || 'Failed to fetch data');
-      }
+      console.error('Error fetching movies:', error);
+      // Nếu có lỗi khi lấy dữ liệu từ database, sử dụng data.json
+      setMovies(movieData.movies);
+      toast.error('Failed to load movies from database, using local data');
     } finally {
       setLoading(false);
     }
   };
 
+  // Hàm lấy poster từ data.json nếu phim từ database không có
+  const getMoviePoster = (movie) => {
+    if (movie.poster) return movie.poster;
+    // Tìm phim trong data.json theo title
+    const staticMovie = movieData.movies.find(m => m.title === movie.title);
+    return staticMovie?.poster || staticMovie?.image || '';
+  };
+
   const handleAddMovie = async (e) => {
     e.preventDefault();
     try {
-      const storedUser = JSON.parse(localStorage.getItem('user'));
-      if (!storedUser || storedUser.role !== 'admin') {
-        console.error('User is not admin:', storedUser);
-        toast.error('Admin privileges required');
-        navigate('/login');
+      // Chuyển đổi duration từ string sang số
+      const durationInMinutes = parseInt(newMovie.duration);
+      if (isNaN(durationInMinutes)) {
+        toast.error('Duration must be a number');
         return;
       }
 
-      // Validate required fields
-      if (!newMovie.title || !newMovie.description || !newMovie.duration || 
-          !newMovie.category || !newMovie.releaseDate || !newMovie.image || 
-          !newMovie.bannerImage || !newMovie.trailer) {
-        toast.error('Please fill in all required fields including trailer');
-        return;
-      }
-
-      // Format movie data
       const movieData = {
         ...newMovie,
-        duration: convertDurationToMinutes(newMovie.duration),
-        poster: newMovie.image,
-        isNowPlaying: Boolean(newMovie.isNowPlaying),
-        isComingSoon: Boolean(newMovie.isComingSoon),
-        rating: Number(newMovie.rating),
-        releaseDate: new Date(newMovie.releaseDate).toISOString().split('T')[0],
-        director: newMovie.director || {
-          name: '',
-          image: '',
-          description: ''
-        },
-        actors: newMovie.actors || []
+        duration: durationInMinutes,
+        genre: newMovie.genre.split(',').map(g => g.trim()), // Chuyển string thành array
+        storyline: newMovie.storyline || newMovie.description // Sử dụng storyline nếu có, nếu không thì dùng description
       };
 
-      console.log('Sending movie data:', movieData);
-      const addedMovie = await movieService.createMovie(movieData);
-      console.log('Response from server:', addedMovie);
-
-      // Update local state with converted duration
-      const movieWithFormattedDuration = {
-        ...addedMovie,
-        duration: convertMinutesToDuration(addedMovie.duration)
-      };
-      setMovies(prevMovies => [...prevMovies, movieWithFormattedDuration]);
-
-      // Reset form
+      const response = await movieService.createMovie(movieData);
+      toast.success('Movie added successfully');
+      setShowAddMovie(false);
       setNewMovie({
         title: '',
         description: '',
         duration: '',
-        category: '',
+        genre: [],
         releaseDate: '',
-        image: '',
-        bannerImage: '',
-        rating: 0,
-        isNowPlaying: false,
-        isComingSoon: false,
-        censorship: '',
-        language: '',
-        storyline: '',
+        poster: '',
+        banner: '',
         trailer: '',
-        director: {
-          name: '',
-          image: '',
-          description: ''
-        },
-        actors: []
+        storyline: '',
+        status: 'coming-soon'
       });
-      setShowAddMovie(false);
-      toast.success('Movie added successfully');
+      // Refresh danh sách phim
+      const updatedMovies = await movieService.getAllMovies();
+      setMovies(updatedMovies);
     } catch (error) {
       console.error('Error adding movie:', error);
-      if (error.message?.includes('Not authorized')) {
-        toast.error('Session expired. Please login again.');
-        logout();
-      } else {
-        toast.error(error.message || 'Failed to add movie');
-      }
+      toast.error(error.response?.data?.message || 'Failed to add movie');
     }
   };
 
@@ -203,9 +169,9 @@ const Dashboard = () => {
         await movieService.deleteMovie(id);
         setMovies(movies.filter(movie => movie._id !== id));
         toast.success('Movie deleted successfully');
-      }
-    } catch (error) {
-      console.error('Error deleting movie:', error);
+        }
+      } catch (error) {
+        console.error('Error deleting movie:', error);
       toast.error(error.message || 'Failed to delete movie');
     }
   };
@@ -218,19 +184,13 @@ const Dashboard = () => {
         title: movieToEdit.title,
         description: movieToEdit.description,
         duration: movieToEdit.duration,
-        category: movieToEdit.category,
+        genre: movieToEdit.genre,
         releaseDate: movieToEdit.releaseDate,
-        image: movieToEdit.image,
-        bannerImage: movieToEdit.bannerImage,
-        rating: movieToEdit.rating,
-        isNowPlaying: movieToEdit.isNowPlaying,
-        isComingSoon: movieToEdit.isComingSoon,
-        censorship: movieToEdit.censorship,
-        language: movieToEdit.language,
-        storyline: movieToEdit.storyline,
+        poster: movieToEdit.image,
+        banner: movieToEdit.bannerImage,
         trailer: movieToEdit.trailer,
-        director: movieToEdit.director,
-        actors: movieToEdit.actors
+        storyline: movieToEdit.storyline,
+        status: movieToEdit.status
       });
       setShowEditMovie(true);
     }
@@ -248,17 +208,17 @@ const Dashboard = () => {
 
       // Validate required fields
       if (!newMovie.title || !newMovie.description || !newMovie.duration || 
-          !newMovie.category || !newMovie.releaseDate || !newMovie.image || !newMovie.trailer) {
+          !newMovie.genre || !newMovie.releaseDate || !newMovie.poster || !newMovie.trailer) {
         toast.error('Please fill in all required fields');
         return;
       }
 
       const updatedMovie = await movieService.updateMovie(selectedMovie._id, newMovie);
-      setMovies(movies.map(movie => 
-        movie._id === selectedMovie._id ? updatedMovie : movie
-      ));
-      setShowEditMovie(false);
-      setSelectedMovie(null);
+        setMovies(movies.map(movie => 
+          movie._id === selectedMovie._id ? updatedMovie : movie
+        ));
+        setShowEditMovie(false);
+        setSelectedMovie(null);
       toast.success('Movie updated successfully');
     } catch (error) {
       console.error('Error updating movie:', error);
@@ -285,83 +245,127 @@ const Dashboard = () => {
   };
 
   // Render movie management section
-  const renderMoviesTab = () => (
-    <div className="p-6">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold">Movie Management</h2>
-        <button
-          onClick={() => setShowAddMovie(true)}
-          className="bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center"
-        >
-          <FiPlus className="mr-2" /> Add Movie
-        </button>
-      </div>
+  const renderMoviesTab = () => {
+    // Lọc phim theo status
+    const nowPlaying = movies.filter(movie => 
+      movie.status === 'now-playing' || movie.isNowPlaying
+    );
+    const comingSoon = movies.filter(movie => 
+      movie.status === 'coming-soon' || movie.isComingSoon
+    );
 
-      {/* Search bar */}
-      <div className="mb-6">
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Search movies..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-4 py-2 border rounded-lg pl-10"
-          />
-          <FiSearch className="absolute left-3 top-3 text-gray-400" />
-        </div>
-      </div>
+  return (
+      <div className="space-y-8">
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-2xl font-bold">Movie Management</h2>
+              <button
+            onClick={() => setShowAddMovie(true)}
+            className="bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center hover:bg-blue-600"
+              >
+            <FiPlus className="mr-2" /> Add Movie
+              </button>
+            </div>
 
-      {/* Now Showing Section */}
-      <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-4">Now Showing</h3>
-        <div className="bg-white rounded-lg shadow overflow-hidden">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Duration</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Release Date</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {movies
-                .filter(movie => 
-                  movie.isNowPlaying &&
-                  (movie.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                  movie.category.toLowerCase().includes(searchTerm.toLowerCase()))
-                )
-                .map(movie => (
-                  <tr key={movie._id}>
+        <div>
+          <h2 className="text-xl font-bold mb-4">Now Showing Movies</h2>
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-white rounded-lg overflow-hidden">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Poster</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Genre</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Duration</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Release Date</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {nowPlaying.map(movie => (
+                  <tr key={movie._id || movie.id}>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center">
-                        <div className="h-10 w-10 flex-shrink-0">
-                          <img className="h-10 w-10 rounded-full object-cover" src={movie.image} alt={movie.title} />
-                        </div>
-                        <div className="ml-4">
-                          <div className="text-sm font-medium text-gray-900">{movie.title}</div>
-                        </div>
-                      </div>
+                      <img 
+                        src={movie.poster || movie.image} 
+                        alt={movie.title} 
+                        className="h-24 w-16 object-cover rounded"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = 'https://via.placeholder.com/150x225?text=No+Image';
+                        }}
+                      />
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">{movie.title}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {Array.isArray(movie.genre) ? movie.genre.join(', ') : movie.genre}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">{movie.duration} min</td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {new Date(movie.releaseDate).toLocaleDateString()}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">{movie.category}</div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">{movie.duration}</div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">
-                        {new Date(movie.releaseDate).toLocaleDateString()}
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                      <button
+          <button
                         onClick={() => handleEditMovie(movie._id)}
-                        className="text-indigo-600 hover:text-indigo-900 mr-4"
+                        className="text-blue-600 hover:text-blue-900 mr-3"
                       >
                         <FiEdit2 className="inline-block" /> Edit
-                      </button>
+          </button>
+          <button
+                        onClick={() => handleDeleteMovie(movie._id)}
+                        className="text-red-600 hover:text-red-900"
+                      >
+                        <FiTrash2 className="inline-block" /> Delete
+          </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            </div>
+        </div>
+
+            <div>
+          <h2 className="text-xl font-bold mb-4">Coming Soon Movies</h2>
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-white rounded-lg overflow-hidden">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Poster</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Genre</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Duration</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Release Date</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {comingSoon.map(movie => (
+                  <tr key={movie._id || movie.id}>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <img 
+                        src={movie.poster || movie.image} 
+                        alt={movie.title} 
+                        className="h-24 w-16 object-cover rounded"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = 'https://via.placeholder.com/150x225?text=No+Image';
+                        }}
+                      />
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">{movie.title}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {Array.isArray(movie.genre) ? movie.genre.join(', ') : movie.genre}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">{movie.duration} min</td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {new Date(movie.releaseDate).toLocaleDateString()}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <button
+                        onClick={() => handleEditMovie(movie._id)}
+                        className="text-blue-600 hover:text-blue-900 mr-3"
+                      >
+                        <FiEdit2 className="inline-block" /> Edit
+                </button>
                       <button
                         onClick={() => handleDeleteMovie(movie._id)}
                         className="text-red-600 hover:text-red-900"
@@ -371,453 +375,275 @@ const Dashboard = () => {
                     </td>
                   </tr>
                 ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
+              </tbody>
+            </table>
+          </div>
+              </div>
 
-      {/* Coming Soon Section */}
-      <div>
-        <h3 className="text-xl font-semibold mb-4">Coming Soon</h3>
-        <div className="bg-white rounded-lg shadow overflow-hidden">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Duration</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Release Date</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {movies
-                .filter(movie => 
-                  movie.isComingSoon &&
-                  (movie.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                  movie.category.toLowerCase().includes(searchTerm.toLowerCase()))
-                )
-                .map(movie => (
-                  <tr key={movie._id}>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center">
-                        <div className="h-10 w-10 flex-shrink-0">
-                          <img className="h-10 w-10 rounded-full object-cover" src={movie.image} alt={movie.title} />
-                        </div>
-                        <div className="ml-4">
-                          <div className="text-sm font-medium text-gray-900">{movie.title}</div>
-                        </div>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">{movie.category}</div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">{movie.duration}</div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">
-                        {new Date(movie.releaseDate).toLocaleDateString()}
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                      <button
-                        onClick={() => handleEditMovie(movie._id)}
-                        className="text-indigo-600 hover:text-indigo-900 mr-4"
-                      >
-                        <FiEdit2 className="inline-block" /> Edit
-                      </button>
-                      <button
-                        onClick={() => handleDeleteMovie(movie._id)}
-                        className="text-red-600 hover:text-red-900"
-                      >
-                        <FiTrash2 className="inline-block" /> Delete
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      {/* Add Movie Modal */}
-      {showAddMovie && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-            <h3 className="text-xl font-bold mb-4">Add New Movie</h3>
-            <form onSubmit={handleAddMovie}>
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Title</label>
-                  <input
-                    type="text"
-                    value={newMovie.title}
-                    onChange={(e) => setNewMovie({...newMovie, title: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Category</label>
-                  <input
-                    type="text"
-                    value={newMovie.category}
-                    onChange={(e) => setNewMovie({...newMovie, category: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Duration (e.g. 2h 30m)</label>
-                  <input
-                    type="text"
-                    value={newMovie.duration}
-                    onChange={(e) => {
-                      const value = e.target.value;
-                      // Chỉ cho phép nhập định dạng "Xh Ym"
-                      if (/^\d+h\s*\d+m$/.test(value) || value === '') {
-                        setNewMovie({...newMovie, duration: value});
-                      }
-                    }}
-                    placeholder="2h 30m"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Release Date</label>
-                  <input
-                    type="date"
-                    value={newMovie.releaseDate}
-                    onChange={(e) => setNewMovie({...newMovie, releaseDate: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Poster URL</label>
-                  <input
-                    type="url"
-                    value={newMovie.image}
-                    onChange={(e) => setNewMovie({...newMovie, image: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Banner Image URL</label>
-                  <input
-                    type="url"
-                    value={newMovie.bannerImage}
-                    onChange={(e) => setNewMovie({...newMovie, bannerImage: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Trailer URL</label>
-                  <input
-                    type="url"
-                    value={newMovie.trailer}
-                    onChange={(e) => setNewMovie({...newMovie, trailer: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Rating</label>
-                  <input
-                    type="number"
-                    step="0.1"
-                    min="0"
-                    max="5"
-                    value={newMovie.rating}
-                    onChange={(e) => setNewMovie({...newMovie, rating: parseFloat(e.target.value)})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Language</label>
-                  <input
-                    type="text"
-                    value={newMovie.language}
-                    onChange={(e) => setNewMovie({...newMovie, language: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Censorship</label>
-                  <input
-                    type="text"
-                    value={newMovie.censorship}
-                    onChange={(e) => setNewMovie({...newMovie, censorship: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div className="col-span-2">
-                  <label className="block text-sm font-medium text-gray-700">Description</label>
-                  <textarea
-                    value={newMovie.description}
-                    onChange={(e) => setNewMovie({...newMovie, description: e.target.value})}
-                    rows="3"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div className="col-span-2">
-                  <label className="block text-sm font-medium text-gray-700">Storyline</label>
-                  <textarea
-                    value={newMovie.storyline}
-                    onChange={(e) => setNewMovie({...newMovie, storyline: e.target.value})}
-                    rows="3"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div className="col-span-2">
-                  <div className="flex items-center space-x-4">
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={newMovie.isNowPlaying}
-                        onChange={(e) => setNewMovie({
-                          ...newMovie,
-                          isNowPlaying: e.target.checked,
-                          isComingSoon: e.target.checked ? false : newMovie.isComingSoon
-                        })}
-                        className="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                      />
-                      <span className="ml-2 text-sm text-gray-700">Now Playing</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={newMovie.isComingSoon}
-                        onChange={(e) => setNewMovie({
-                          ...newMovie,
-                          isComingSoon: e.target.checked,
-                          isNowPlaying: e.target.checked ? false : newMovie.isNowPlaying
-                        })}
-                        className="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                      />
-                      <span className="ml-2 text-sm text-gray-700">Coming Soon</span>
-                    </label>
+        {/* Add Movie Modal */}
+              {showAddMovie && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+            <div className="bg-white rounded-lg p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+              <h3 className="text-xl font-bold mb-4">Add New Movie</h3>
+              <form onSubmit={handleAddMovie}>
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Title</label>
+                    <input
+                      type="text"
+                      value={newMovie.title}
+                      onChange={(e) => setNewMovie({...newMovie, title: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Duration (minutes)</label>
+                    <input
+                      type="number"
+                      value={newMovie.duration}
+                      onChange={(e) => setNewMovie({...newMovie, duration: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Genre (comma-separated)</label>
+                    <input
+                      type="text"
+                      value={newMovie.genre}
+                      onChange={(e) => setNewMovie({...newMovie, genre: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      placeholder="Action, Drama, Comedy"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Release Date</label>
+                    <input
+                      type="date"
+                      value={newMovie.releaseDate}
+                      onChange={(e) => setNewMovie({...newMovie, releaseDate: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Poster URL</label>
+                    <input
+                      type="url"
+                      value={newMovie.poster}
+                      onChange={(e) => setNewMovie({...newMovie, poster: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Banner URL</label>
+                    <input
+                      type="url"
+                      value={newMovie.banner}
+                      onChange={(e) => setNewMovie({...newMovie, banner: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Trailer URL</label>
+                    <input
+                      type="url"
+                      value={newMovie.trailer}
+                      onChange={(e) => setNewMovie({...newMovie, trailer: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Status</label>
+                    <select
+                      value={newMovie.status}
+                      onChange={(e) => setNewMovie({...newMovie, status: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    >
+                      <option value="coming-soon">Coming Soon</option>
+                      <option value="now-playing">Now Playing</option>
+                    </select>
+                  </div>
+                  <div className="col-span-2">
+                    <label className="block text-sm font-medium text-gray-700">Description</label>
+                    <textarea
+                      value={newMovie.description}
+                      onChange={(e) => setNewMovie({...newMovie, description: e.target.value})}
+                      rows="2"
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div className="col-span-2">
+                    <label className="block text-sm font-medium text-gray-700">Storyline</label>
+                    <textarea
+                      value={newMovie.storyline}
+                      onChange={(e) => setNewMovie({...newMovie, storyline: e.target.value})}
+                      rows="3"
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
                   </div>
                 </div>
-              </div>
-              <div className="flex justify-end space-x-4">
-                <button
-                  type="button"
-                  onClick={() => setShowAddMovie(false)}
-                  className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
-                >
-                  Add Movie
-                </button>
-              </div>
-            </form>
+                <div className="flex justify-end space-x-4">
+                  <button
+                    type="button"
+                    onClick={() => setShowAddMovie(false)}
+                    className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                  >
+                    Add Movie
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* Edit Movie Modal */}
-      {showEditMovie && selectedMovie && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-            <h3 className="text-xl font-bold mb-4">Edit Movie</h3>
-            <form onSubmit={handleUpdateMovie}>
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Title</label>
-                  <input
-                    type="text"
-                    value={newMovie.title}
-                    onChange={(e) => setNewMovie({...newMovie, title: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Category</label>
-                  <input
-                    type="text"
-                    value={newMovie.category}
-                    onChange={(e) => setNewMovie({...newMovie, category: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Duration (e.g. 2h 30m)</label>
-                  <input
-                    type="text"
-                    value={newMovie.duration}
-                    onChange={(e) => {
-                      const value = e.target.value;
-                      // Chỉ cho phép nhập định dạng "Xh Ym"
-                      if (/^\d+h\s*\d+m$/.test(value) || value === '') {
-                        setNewMovie({...newMovie, duration: value});
-                      }
-                    }}
-                    placeholder="2h 30m"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Release Date</label>
-                  <input
-                    type="date"
-                    value={newMovie.releaseDate}
-                    onChange={(e) => setNewMovie({...newMovie, releaseDate: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Poster URL</label>
-                  <input
-                    type="url"
-                    value={newMovie.image}
-                    onChange={(e) => setNewMovie({...newMovie, image: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Banner Image URL</label>
-                  <input
-                    type="url"
-                    value={newMovie.bannerImage}
-                    onChange={(e) => setNewMovie({...newMovie, bannerImage: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Trailer URL</label>
-                  <input
-                    type="url"
-                    value={newMovie.trailer}
-                    onChange={(e) => setNewMovie({...newMovie, trailer: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Rating</label>
-                  <input
-                    type="number"
-                    step="0.1"
-                    min="0"
-                    max="5"
-                    value={newMovie.rating}
-                    onChange={(e) => setNewMovie({...newMovie, rating: parseFloat(e.target.value)})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Language</label>
-                  <input
-                    type="text"
-                    value={newMovie.language}
-                    onChange={(e) => setNewMovie({...newMovie, language: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">Censorship</label>
-                  <input
-                    type="text"
-                    value={newMovie.censorship}
-                    onChange={(e) => setNewMovie({...newMovie, censorship: e.target.value})}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div className="col-span-2">
-                  <label className="block text-sm font-medium text-gray-700">Description</label>
-                  <textarea
-                    value={newMovie.description}
-                    onChange={(e) => setNewMovie({...newMovie, description: e.target.value})}
-                    rows="3"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div className="col-span-2">
-                  <label className="block text-sm font-medium text-gray-700">Storyline</label>
-                  <textarea
-                    value={newMovie.storyline}
-                    onChange={(e) => setNewMovie({...newMovie, storyline: e.target.value})}
-                    rows="3"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div className="col-span-2">
-                  <div className="flex items-center space-x-4">
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={newMovie.isNowPlaying}
-                        onChange={(e) => setNewMovie({
-                          ...newMovie,
-                          isNowPlaying: e.target.checked,
-                          isComingSoon: e.target.checked ? false : newMovie.isComingSoon
-                        })}
-                        className="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                      />
-                      <span className="ml-2 text-sm text-gray-700">Now Playing</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={newMovie.isComingSoon}
-                        onChange={(e) => setNewMovie({
-                          ...newMovie,
-                          isComingSoon: e.target.checked,
-                          isNowPlaying: e.target.checked ? false : newMovie.isNowPlaying
-                        })}
-                        className="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                      />
-                      <span className="ml-2 text-sm text-gray-700">Coming Soon</span>
-                    </label>
+        {/* Edit Movie Modal */}
+              {showEditMovie && selectedMovie && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+            <div className="bg-white rounded-lg p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+              <h3 className="text-xl font-bold mb-4">Edit Movie</h3>
+              <form onSubmit={handleUpdateMovie}>
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Title</label>
+                    <input
+                      type="text"
+                      value={newMovie.title}
+                      onChange={(e) => setNewMovie({...newMovie, title: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Duration (minutes)</label>
+                    <input
+                      type="number"
+                      value={newMovie.duration}
+                      onChange={(e) => setNewMovie({...newMovie, duration: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Genre (comma-separated)</label>
+                    <input
+                      type="text"
+                      value={newMovie.genre}
+                      onChange={(e) => setNewMovie({...newMovie, genre: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      placeholder="Action, Drama, Comedy"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Release Date</label>
+                    <input
+                      type="date"
+                      value={newMovie.releaseDate}
+                      onChange={(e) => setNewMovie({...newMovie, releaseDate: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Poster URL</label>
+                    <input
+                      type="url"
+                      value={newMovie.poster}
+                      onChange={(e) => setNewMovie({...newMovie, poster: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Banner URL</label>
+                    <input
+                      type="url"
+                      value={newMovie.banner}
+                      onChange={(e) => setNewMovie({...newMovie, banner: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Trailer URL</label>
+                    <input
+                      type="url"
+                      value={newMovie.trailer}
+                      onChange={(e) => setNewMovie({...newMovie, trailer: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Status</label>
+                    <select
+                      value={newMovie.status}
+                      onChange={(e) => setNewMovie({...newMovie, status: e.target.value})}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    >
+                      <option value="coming-soon">Coming Soon</option>
+                      <option value="now-playing">Now Playing</option>
+                    </select>
+                  </div>
+                  <div className="col-span-2">
+                    <label className="block text-sm font-medium text-gray-700">Description</label>
+                    <textarea
+                      value={newMovie.description}
+                      onChange={(e) => setNewMovie({...newMovie, description: e.target.value})}
+                      rows="2"
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div className="col-span-2">
+                    <label className="block text-sm font-medium text-gray-700">Storyline</label>
+                    <textarea
+                      value={newMovie.storyline}
+                      onChange={(e) => setNewMovie({...newMovie, storyline: e.target.value})}
+                      rows="3"
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      required
+                    />
                   </div>
                 </div>
-              </div>
-              <div className="flex justify-end space-x-4">
-                <button
-                  type="button"
-                  onClick={() => setShowEditMovie(false)}
-                  className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
-                >
-                  Update Movie
-                </button>
-              </div>
-            </form>
+                <div className="flex justify-end space-x-4">
+                  <button
+                    type="button"
+                    onClick={() => setShowEditMovie(false)}
+                    className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                  >
+                    Update Movie
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
-      )}
-    </div>
-  );
+        )}
+      </div>
+    );
+  };
 
   // Tạm thời ẩn các tab Users và Bookings cho đến khi API endpoints được cập nhật
   const renderTabs = () => (
@@ -833,7 +659,7 @@ const Dashboard = () => {
         Movies
       </button>
       {/* Tạm thời comment out các tab khác
-      <button
+                                <button
         onClick={() => setActiveTab('users')}
         className={`px-4 py-2 rounded-lg ${
           activeTab === 'users'
@@ -842,8 +668,8 @@ const Dashboard = () => {
         }`}
       >
         Users
-      </button>
-      <button
+                                </button>
+                                <button
         onClick={() => setActiveTab('bookings')}
         className={`px-4 py-2 rounded-lg ${
           activeTab === 'bookings'
@@ -852,9 +678,9 @@ const Dashboard = () => {
         }`}
       >
         Bookings
-      </button>
+                                </button>
       */}
-    </div>
+                              </div>
   );
 
   const renderContent = () => {
@@ -880,7 +706,7 @@ const Dashboard = () => {
           <div className="px-4 py-6 sm:px-0">
             <div className="flex justify-between items-center mb-6">
               <h1 className="text-3xl font-bold text-gray-900">Admin Dashboard</h1>
-            </div>
+                </div>
             <div className="min-h-[400px] flex items-center justify-center">
               <div className="animate-spin rounded-full h-12 w-12 border-4 border-blue-600 border-t-transparent"></div>
             </div>
@@ -899,7 +725,7 @@ const Dashboard = () => {
             <div className="flex items-center space-x-4">
               <span className="text-gray-600">
                 Welcome, {JSON.parse(localStorage.getItem('user'))?.name || 'Admin'}
-              </span>
+                              </span>
               <button
                 onClick={() => {
                   logout();
@@ -909,13 +735,13 @@ const Dashboard = () => {
               >
                 Logout
               </button>
+                </div>
             </div>
-          </div>
 
           {loading ? (
             <div className="min-h-[400px] flex items-center justify-center">
               <div className="animate-spin rounded-full h-12 w-12 border-4 border-blue-600 border-t-transparent"></div>
-            </div>
+                </div>
           ) : (
             <>
               {renderTabs()}

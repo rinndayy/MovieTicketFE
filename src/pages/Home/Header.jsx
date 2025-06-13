@@ -4,8 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   FiBell, FiClock, FiMapPin, FiSearch, FiMenu, FiX, FiLogOut, FiUser, FiFilm
 } from 'react-icons/fi';
-import movieData from '../data/data.json';
 import { useAuth } from '../../context/AuthContext';
+import movieData from '../data/data.json';
+import { getAllMovies } from '../../services/movieService';
+import { toast } from 'react-toastify';
 
 const TicketNotification = ({ ticket, movie, onClick, onDelete }) => (
   <motion.div
@@ -65,6 +67,7 @@ const Header = () => {
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [showDrawer, setShowDrawer] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
+  const [allMovies, setAllMovies] = useState([]);
   const navigate = useNavigate();
 
   // Load tickets from localStorage and enrich with movie data
@@ -78,9 +81,35 @@ const Header = () => {
     return () => window.removeEventListener('storage', loadTickets);
   }, []);
 
+  // Fetch all movies for search
+  useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        // Lấy phim từ database
+        const dbMovies = await getAllMovies();
+        
+        // Kết hợp phim từ database và data.json
+        const combinedMovies = [
+          ...dbMovies,
+          ...movieData.movies.filter(movie => 
+            !dbMovies.some(dbMovie => dbMovie.id === movie.id)
+          )
+        ];
+        
+        setAllMovies(combinedMovies);
+      } catch (error) {
+        console.error('Error fetching movies:', error);
+        // Nếu có lỗi khi lấy dữ liệu từ database, sử dụng data.json
+        setAllMovies(movieData.movies);
+        toast.error('Failed to load movies from database, using local data');
+      }
+    };
+    fetchMovies();
+  }, []);
+
   // Get movie data for a ticket
   const getMovieData = (movieId) => {
-    return movieData.movies.find(movie => movie.id === movieId) || null;
+    return allMovies.find(movie => movie.id === movieId) || null;
   };
 
   // Debounced search with error handling
@@ -91,29 +120,20 @@ const Header = () => {
         return;
       }
 
-      // Ensure movieData.movies is an array
-      if (!Array.isArray(movieData.movies)) {
-        console.error('movieData.movies is not an array:', movieData.movies);
-        setFilteredMovies([]);
-        return;
-      }
-
-      const filtered = movieData.movies.filter(movie => {
-        // Ensure movie is an object and has required properties
+      const filtered = allMovies.filter(movie => {
         if (!movie || typeof movie !== 'object') {
           console.warn('Invalid movie object:', movie);
           return false;
         }
 
-        // Convert fields to strings and handle undefined/null
         const title = movie.title ? String(movie.title).toLowerCase() : '';
-        const genre = movie.genre ? String(movie.genre).toLowerCase() : '';
+        const category = movie.category ? String(movie.category).toLowerCase() : '';
         const description = movie.description ? String(movie.description).toLowerCase() : '';
         const query = searchQuery.toLowerCase();
 
         return (
           title.includes(query) ||
-          genre.includes(query) ||
+          category.includes(query) ||
           description.includes(query)
         );
       }).slice(0, 5); // Limit to 5 results
@@ -122,7 +142,7 @@ const Header = () => {
     }, 300);
 
     return () => clearTimeout(timeoutId);
-  }, [searchQuery]);
+  }, [searchQuery, allMovies]);
 
   const handleTicketClick = (ticket) => {
     navigate(`/tickets/${ticket.id}`);
