@@ -18,20 +18,34 @@ const Home = () => {
 
   // Hàm lấy poster từ data.json nếu phim từ database không có, đồng thời giữ _id từ database
   const getMoviePoster = (movie) => {
-    // Nếu phim từ database có poster, trả về poster và _id gốc từ database
-    if (movie.poster) {
-      console.log("Phim từ database có poster, _id:", movie._id, "poster:", movie.poster);
-      return { poster: movie.poster, _id: movie._id };
+    // Nếu phim từ database có poster hoặc image, trả về URL và _id gốc từ database
+    if (movie.poster || movie.image) {
+      console.log("Phim từ database có poster/image, _id:", movie._id, "URL:", (movie.poster || movie.image));
+      return { 
+        poster: movie.poster || movie.image, 
+        _id: movie._id,
+        bannerImage: movie.bannerImage || movie.banner || movie.image
+      };
     }
+    
     // Tìm phim trong data.json theo title
     const staticMovie = movieData.movies.find(m => m.title === movie.title);
     if (staticMovie) {
       // Nếu tìm thấy phim tĩnh, trả về poster từ data.json nhưng vẫn giữ _id từ database
-      console.log("Phim từ database không có poster, lấy poster từ data.json, _id:", movie._id, "poster từ data:", (staticMovie.poster || staticMovie.image));
-      return { poster: (staticMovie.poster || staticMovie.image), _id: movie._id };
+      console.log("Phim từ database không có poster, lấy poster từ data.json, _id:", movie._id);
+      return { 
+        poster: staticMovie.poster || staticMovie.image, 
+        _id: movie._id,
+        bannerImage: staticMovie.bannerImage || staticMovie.banner || staticMovie.image
+      };
     }
+    
     console.log("Phim không tìm thấy poster ở cả database và data.json, _id:", movie._id);
-    return { poster: '', _id: movie._id };
+    return { 
+      poster: '/fallback-poster.jpg', 
+      _id: movie._id,
+      bannerImage: '/fallback-banner.jpg'
+    };
   };
 
   useEffect(() => {
@@ -49,50 +63,84 @@ const Home = () => {
         // Lọc phim từ database theo status
         const dbNowPlaying = dbMovies.filter(movie => movie.status === 'now-playing');
         const dbComingSoon = dbMovies.filter(movie => movie.status === 'coming-soon');
-        console.log("Phim đang chiếu từ database (dbNowPlaying):", dbNowPlaying);
-        console.log("Phim sắp chiếu từ database (dbComingSoon):", dbComingSoon);
         
         // Kết hợp phim từ database và data.json
-        // Nếu phim có cùng title, ưu tiên dùng phim từ database nhưng giữ poster từ data.json nếu cần
         const combinedNowPlaying = [
+          // Phim từ database
           ...dbNowPlaying.map(movie => {
-            const { poster, _id } = getMoviePoster(movie);
-            // Đảm bảo _id luôn là _id từ database (MongoDB)
-            const combinedMovie = { ...movie, poster, _id };
-            console.log("Kết hợp phim đang chiếu (combined):", combinedMovie);
-            return combinedMovie;
+            const { poster, _id, bannerImage } = getMoviePoster(movie);
+            return { 
+              ...movie, 
+              poster, 
+              _id,
+              bannerImage,
+              image: poster,
+              id: _id,
+              isFromDatabase: true // Đánh dấu phim từ database
+            };
           }),
-          ...staticNowPlaying.filter(staticMovie => 
-            !dbNowPlaying.some(dbMovie => dbMovie.title === staticMovie.title)
-          )
+          // Phim tĩnh từ data.json (chỉ thêm những phim không trùng với database)
+          ...staticNowPlaying
+            .filter(staticMovie => !dbNowPlaying.some(dbMovie => dbMovie.title === staticMovie.title))
+            .map(staticMovie => ({
+              ...staticMovie,
+              _id: `static_${staticMovie.id}`, // Tạo _id riêng cho phim tĩnh
+              isFromDatabase: false // Đánh dấu phim từ data.json
+            }))
         ];
         
         const combinedComingSoon = [
+          // Phim từ database
           ...dbComingSoon.map(movie => {
-            const { poster, _id } = getMoviePoster(movie);
-            // Đảm bảo _id luôn là _id từ database (MongoDB)
-            const combinedMovie = { ...movie, poster, _id };
-            console.log("Kết hợp phim sắp chiếu (combined):", combinedMovie);
-            return combinedMovie;
+            const { poster, _id, bannerImage } = getMoviePoster(movie);
+            return { 
+              ...movie, 
+              poster, 
+              _id,
+              bannerImage,
+              image: poster,
+              id: _id,
+              isFromDatabase: true // Đánh dấu phim từ database
+            };
           }),
-          ...staticComingSoon.filter(staticMovie => 
-            !dbComingSoon.some(dbMovie => dbMovie.title === staticMovie.title)
-          )
+          // Phim tĩnh từ data.json (chỉ thêm những phim không trùng với database)
+          ...staticComingSoon
+            .filter(staticMovie => !dbComingSoon.some(dbMovie => dbMovie.title === staticMovie.title))
+            .map(staticMovie => ({
+              ...staticMovie,
+              _id: `static_${staticMovie.id}`, // Tạo _id riêng cho phim tĩnh
+              isFromDatabase: false // Đánh dấu phim từ data.json
+            }))
         ];
 
         setNowPlayingMovies(combinedNowPlaying);
         setComingSoonMovies(combinedComingSoon);
         
         // Lấy 5 phim đang chiếu cho banner (ưu tiên phim từ database)
-        const banner = combinedNowPlaying.slice(0, 5);
+        const banner = [
+          ...combinedNowPlaying.filter(movie => movie.isFromDatabase).slice(0, 3),
+          ...combinedNowPlaying.filter(movie => !movie.isFromDatabase).slice(0, 2)
+        ];
         setBannerMovies(banner);
         
       } catch (error) {
         console.error('Error fetching movies:', error);
         // Nếu có lỗi khi lấy dữ liệu từ database, sử dụng data.json
-        setNowPlayingMovies(movieData.movies.filter(movie => movie.isNowPlaying));
-        setComingSoonMovies(movieData.movies.filter(movie => movie.isComingSoon));
-        setBannerMovies(movieData.bannerMovies);
+        setNowPlayingMovies(movieData.movies.filter(movie => movie.isNowPlaying).map(movie => ({
+          ...movie,
+          _id: `static_${movie.id}`,
+          isFromDatabase: false
+        })));
+        setComingSoonMovies(movieData.movies.filter(movie => movie.isComingSoon).map(movie => ({
+          ...movie,
+          _id: `static_${movie.id}`,
+          isFromDatabase: false
+        })));
+        setBannerMovies(movieData.bannerMovies.map(movie => ({
+          ...movie,
+          _id: `static_${movie.id}`,
+          isFromDatabase: false
+        })));
         toast.error('Failed to load movies from database, using local data');
       } finally {
         setLoading(false);
