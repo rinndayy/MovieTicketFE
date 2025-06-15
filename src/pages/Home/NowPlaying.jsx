@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FiStar } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 
-const NowPlaying = ({ movies }) => {
+const Soon = ({ movies }) => {
   const navigate = useNavigate();
   const [showAll, setShowAll] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
@@ -31,7 +31,8 @@ const NowPlaying = ({ movies }) => {
 
   const handleClick = (movie) => {
     if (!isDragging) {
-      navigate(`/movie/${movie.id}`);
+      const movieId = movie.isFromDatabase ? movie._id : movie.id;
+      navigate(`/movie/${movieId}`);
     }
   };
 
@@ -40,13 +41,13 @@ const NowPlaying = ({ movies }) => {
   }
 
   return (
-    <div className="py-8">
+    <div className="py-8 bg-gray-50 dark:bg-gray-800/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h2 className="text-2xl font-bold dark:text-white">Now Playing</h2>
+            <h2 className="text-2xl font-bold dark:text-white">Coming Soon</h2>
             <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
-              Book tickets for these movies now
+              Get ready for these upcoming releases
             </p>
           </div>
           <button 
@@ -93,9 +94,18 @@ const NowPlaying = ({ movies }) => {
                           <FiStar className="w-4 h-4 text-yellow-400" />
                           <span>{movie.rating || '8.5'}</span>
                         </div>
-                        <span className="px-2 py-1 bg-white/20 rounded-lg text-sm">
-                          {movie.duration}
-                        </span>
+                        <div className="flex flex-col items-end">
+                          <span className="px-2 py-1 bg-white/20 rounded-lg text-sm mb-1">
+                            {movie.duration}
+                          </span>
+                          <span className="text-sm text-red-400">
+                            {new Date(movie.releaseDate).toLocaleDateString('en-US', {
+                              month: 'short',
+                              day: 'numeric',
+                              year: 'numeric'
+                            })}
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -109,4 +119,4 @@ const NowPlaying = ({ movies }) => {
   );
 };
 
-export default NowPlaying; 
+export default Soon;

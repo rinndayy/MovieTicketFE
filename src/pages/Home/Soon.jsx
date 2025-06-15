@@ -31,7 +31,8 @@ const Soon = ({ movies }) => {
 
   const handleClick = (movie) => {
     if (!isDragging) {
-      navigate(`/movie/${movie.id}`);
+      const movieId = movie.isFromDatabase ? movie._id : movie.id;
+      navigate(`/movie/${movieId}`);
     }
   };
 

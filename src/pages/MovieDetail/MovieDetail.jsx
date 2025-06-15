@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiStar, FiArrowLeft, FiClock, FiCalendar, FiAlertCircle } from 'react-icons/fi';
+import { FiStar, FiArrowLeft, FiClock, FiCalendar, FiPlay } from 'react-icons/fi';
 import movieData from '../data/data.json';
+import axios from 'axios';
 
 const MovieDetail = () => {
   const { id } = useParams();
@@ -11,8 +12,60 @@ const MovieDetail = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const showtimesRef = useRef(null);
 
-  // Find movie from static data
-  const movie = movieData.movies.find(m => m.id === id);
+  // Tìm phim từ data tĩnh
+  const staticMovie = movieData.movies.find(m => {
+    // Kiểm tra cả id dạng số và dạng chuỗi
+    const movieId = typeof m.id === 'string' ? m.id : m.id.toString();
+    const paramId = typeof id === 'string' ? id : id.toString();
+    return movieId === paramId;
+  });
+  
+  // State cho phim từ database
+  const [dbMovie, setDbMovie] = useState(null);
+
+  useEffect(() => {
+    const fetchDbMovie = async () => {
+      // Nếu tìm thấy phim tĩnh, không cần fetch từ database
+      if (staticMovie) {
+        setLoading(false);
+        return;
+      }
+
+      try {
+        const response = await axios.get(`http://localhost:5000/api/movies/${id}`);
+        if (response.data) {
+          // Chuyển đổi dữ liệu từ database sang format giống data tĩnh
+          const movieData = response.data;
+          const formattedMovie = {
+            ...movieData,
+            id: movieData._id, // Thêm id để tương thích với data tĩnh
+            image: movieData.poster || movieData.image,
+            bannerImage: movieData.bannerImage || movieData.banner || movieData.poster,
+            genre: movieData.genre || movieData.category || [],
+            duration: movieData.duration || '120',
+            cinemas: movieData.cinemas || [],
+            actors: movieData.actors || [],
+            director: movieData.director || { name: 'Unknown', image: '/fallback-director.jpg' },
+            rating: movieData.rating || '8.5',
+            category: movieData.category || 'Action',
+            language: movieData.language || 'English',
+            censorship: movieData.censorship || 'PG-13',
+            storyline: movieData.storyline || movieData.description || 'No description available'
+          };
+          setDbMovie(formattedMovie);
+        }
+      } catch (error) {
+        console.error('Error fetching movie from database:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchDbMovie();
+  }, [id, staticMovie]);
+
+  // Ưu tiên sử dụng phim tĩnh nếu có, nếu không thì dùng phim từ database
+  const movie = staticMovie || dbMovie;
 
   // Function to scroll to showtimes section
   const scrollToShowtimes = () => {
